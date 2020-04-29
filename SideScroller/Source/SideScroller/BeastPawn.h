@@ -6,6 +6,16 @@
 #include "GameFramework/Pawn.h"
 #include "BeastPawn.generated.h"
 
+UENUM()
+enum class UEnemyState
+{
+	Idle UMETA(DisplayName = "Idle"),
+	Running UMETA(DisplayName = "Running"),
+	Attacking UMETA(DisplayName = "Attacking"),
+	Jumping UMETA(DisplayName = "Jumping"),
+	Dead UMETA(DisplayName = "Dead"), 
+};
+
 UCLASS()
 class SIDESCROLLER_API ABeastPawn : public APawn
 {
@@ -26,12 +36,14 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	virtual void ApplyDamage(int32 damage); 
+	virtual void ApplyDamage(int32 damage);  
 
 protected:
-
 	UPROPERTY(EditAnywhere, Category = "Beast")
 		class UBoxComponent* m_BodyHitBox; 
+
+	UPROPERTY(EditAnywhere, Category = "Beast")
+		class UPaperSpriteComponent* m_TestSprite; 
 
 	UPROPERTY(EditAnywhere, Category = "Beast")
 		class UPaperFlipbookComponent* m_ActiveFlipbook; 
@@ -44,4 +56,13 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category = "Beast")
 		int32 m_TotalHealth = 3;
+
+	int32 DeathPlaybackPositionInFrames;
+	int32 DeathFlipbookLengthInFrames;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Beast")
+		TEnumAsByte<UEnemyState> m_CurrentState;
+
+public:
+	UBoxComponent* GetBoxComponent(); 
 };

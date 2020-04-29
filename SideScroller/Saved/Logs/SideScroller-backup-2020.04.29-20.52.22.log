@@ -1,0 +1,1121 @@
+﻿Log file open, 04/29/20 16:32:23
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: SideScroller
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.165266
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin NUTUnrealEngine4
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ScreenshotTools
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.24-CL-11590370
+LogInit: Engine Version: 4.24.3-11590370+++UE4+Release-4.24
+LogInit: Compatible Engine Version: 4.24.0-10570792+++UE4+Release-4.24
+LogInit: Net CL: 10570792
+LogInit: OS: Windows 10 (Release 1903) (), CPU: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz, GPU: Intel(R) HD Graphics 630
+LogInit: Compiled (64-bit): Feb 24 2020 15:39:18
+LogInit: Compiled with Visual C++: 19.16.27032.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.24
+LogInit: Command Line:  -skipcompile
+LogInit: Base Directory: D:/Program Files (x86)/UE_4.24/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 25
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 3
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 37
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 36
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 2
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 36
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 11
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 2
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 2
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 31
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 8
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 9
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 8
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Engine.ini]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Engine.ini]
+[2020.04.29-20.32.23:787][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Engine.ini]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2020.04.29-20.32.23:787][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Engine.ini]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2020.04.29-20.32.23:788][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2020.04.29-20.32.23:789][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2020.04.29-20.32.23:789][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2020.04.29-20.32.23:789][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Engine.ini]
+[2020.04.29-20.32.23:789][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Engine.ini]
+[2020.04.29-20.32.23:796][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:796][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2020.04.29-20.32.23:796][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2020.04.29-20.32.23:796][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:796][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2020.04.29-20.32.23:796][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2020.04.29-20.32.23:797][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2020.04.29-20.32.23:798][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2020.04.29-20.32.23:799][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2020.04.29-20.32.23:800][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2020.04.29-20.32.23:801][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2020.04.29-20.32.23:802][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:802][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2020.04.29-20.32.23:802][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2020.04.29-20.32.23:802][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:802][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2020.04.29-20.32.23:802][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2020.04.29-20.32.23:802][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2020.04.29-20.32.23:802][  0]LogInit: Selected Device Profile: [Windows]
+[2020.04.29-20.32.23:802][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2020.04.29-20.32.23:805][  0]LogHAL: Display: Platform has ~ 16 GB [17039618048 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2020.04.29-20.32.23:805][  0]LogInit: Going up to parent DeviceProfile []
+[2020.04.29-20.32.23:805][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:805][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2020.04.29-20.32.23:805][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2020.04.29-20.32.23:805][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:805][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2020.04.29-20.32.23:805][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:805][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2020.04.29-20.32.23:805][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2020.04.29-20.32.23:805][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2020.04.29-20.32.23:806][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2020.04.29-20.32.23:807][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2020.04.29-20.32.23:808][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2020.04.29-20.32.23:809][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2020.04.29-20.32.23:810][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2020.04.29-20.32.23:811][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2020.04.29-20.32.23:811][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:811][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2020.04.29-20.32.23:811][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2020.04.29-20.32.23:811][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Scalability.ini]
+[2020.04.29-20.32.23:811][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2020.04.29-20.32.23:811][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2020.04.29-20.32.23:811][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2020.04.29-20.32.23:811][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2020.04.29-20.32.23:812][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2020.04.29-20.32.23:812][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2020.04.29-20.32.23:812][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/adale/Desktop/2DSouls/SideScroller/Saved/Config/Windows/Engine.ini]
+[2020.04.29-20.32.23:812][  0]LogInit: Computer: DESKTOP-J52MBI8
+[2020.04.29-20.32.23:812][  0]LogInit: User: adale
+[2020.04.29-20.32.23:812][  0]LogInit: CPU Page size=4096, Cores=4
+[2020.04.29-20.32.23:812][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2020.04.29-20.32.23:812][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2020.04.29-20.32.23:812][  0]LogMemory: Platform Memory Stats for Windows
+[2020.04.29-20.32.23:812][  0]LogMemory: Process Physical Memory: 105.50 MB used, 105.50 MB peak
+[2020.04.29-20.32.23:812][  0]LogMemory: Process Virtual Memory: 100.68 MB used, 100.68 MB peak
+[2020.04.29-20.32.23:812][  0]LogMemory: Physical Memory: 8250.93 MB used,  7999.31 MB free, 16250.25 MB total
+[2020.04.29-20.32.23:813][  0]LogMemory: Virtual Memory: 5137.55 MB used,  134212592.00 MB free, 134217728.00 MB total
+[2020.04.29-20.32.23:820][  0]LogWindows: WindowsPlatformFeatures enabled
+[2020.04.29-20.32.24:035][  0]LogInit: Using OS detected language (en-US).
+[2020.04.29-20.32.24:035][  0]LogInit: Using OS detected locale (en-CA).
+[2020.04.29-20.32.24:037][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2020.04.29-20.32.24:217][  0]LogInit: Setting process to per monitor DPI aware
+[2020.04.29-20.32.24:282][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2020.04.29-20.32.24:282][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2020.04.29-20.32.24:573][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.04.29-20.32.24:573][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
+[2020.04.29-20.32.24:573][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
+[2020.04.29-20.32.24:573][  0]LogD3D11RHI: D3D11 adapters:
+[2020.04.29-20.32.24:679][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1050 Ti' (Feature Level 11_0)
+[2020.04.29-20.32.24:679][  0]LogD3D11RHI:       4018/0/8125 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2020.04.29-20.32.24:722][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 630' (Feature Level 11_0)
+[2020.04.29-20.32.24:722][  0]LogD3D11RHI:       128/0/8125 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
+[2020.04.29-20.32.24:728][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2020.04.29-20.32.24:728][  0]LogD3D11RHI:       0/0/8125 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2020.04.29-20.32.24:728][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2020.04.29-20.32.24:777][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2020.04.29-20.32.24:777][  0]LogD3D11RHI:     GPU DeviceId: 0x1c8c (for the marketing name, search the web for "GPU Device Id")
+[2020.04.29-20.32.24:777][  0]LogWindows: EnumDisplayDevices:
+[2020.04.29-20.32.24:778][  0]LogWindows:    0. 'Intel(R) HD Graphics 630' (P:1 D:1)
+[2020.04.29-20.32.24:779][  0]LogWindows:    1. 'Intel(R) HD Graphics 630' (P:0 D:0)
+[2020.04.29-20.32.24:779][  0]LogWindows:    2. 'Intel(R) HD Graphics 630' (P:0 D:0)
+[2020.04.29-20.32.24:780][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1050 Ti' (P:0 D:1)
+[2020.04.29-20.32.24:780][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter 
+[2020.04.29-20.32.24:780][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1050 Ti
+[2020.04.29-20.32.24:780][  0]LogD3D11RHI:   Driver Version: 441.08 (internal:26.21.14.4108, unified:441.08)
+[2020.04.29-20.32.24:781][  0]LogD3D11RHI:      Driver Date: 10-22-2019
+[2020.04.29-20.32.24:781][  0]LogRHI: Texture pool is 2812 MB (70% of 4018 MB)
+[2020.04.29-20.32.24:848][  0]LogD3D11RHI: RHI has support for 64 bit atomics
+[2020.04.29-20.32.24:848][  0]LogD3D11RHI: Async texture creation enabled
+[2020.04.29-20.32.24:877][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2020.04.29-20.32.25:243][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AllDesktop'
+[2020.04.29-20.32.25:280][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+[2020.04.29-20.32.25:281][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+[2020.04.29-20.32.25:281][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ATC'
+[2020.04.29-20.32.25:281][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+[2020.04.29-20.32.25:281][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1'
+[2020.04.29-20.32.25:281][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1a'
+[2020.04.29-20.32.25:281][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+[2020.04.29-20.32.25:282][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_PVRTC'
+[2020.04.29-20.32.25:282][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+[2020.04.29-20.32.25:282][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+[2020.04.29-20.32.25:282][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ATCClient'
+[2020.04.29-20.32.25:282][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+[2020.04.29-20.32.25:282][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1Client'
+[2020.04.29-20.32.25:282][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1aClient'
+[2020.04.29-20.32.25:282][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+[2020.04.29-20.32.25:282][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_PVRTCClient'
+[2020.04.29-20.32.25:283][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+[2020.04.29-20.32.25:283][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+[2020.04.29-20.32.25:316][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
+[2020.04.29-20.32.25:316][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
+[2020.04.29-20.32.25:328][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxNoEditor'
+[2020.04.29-20.32.25:340][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
+[2020.04.29-20.32.25:350][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
+[2020.04.29-20.32.25:361][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64NoEditor'
+[2020.04.29-20.32.25:372][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Client'
+[2020.04.29-20.32.25:382][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Server'
+[2020.04.29-20.32.25:411][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Lumin'
+[2020.04.29-20.32.25:411][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LuminClient'
+[2020.04.29-20.32.25:428][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
+[2020.04.29-20.32.25:429][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
+[2020.04.29-20.32.25:439][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2020.04.29-20.32.25:451][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2020.04.29-20.32.25:461][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2020.04.29-20.32.25:471][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2020.04.29-20.32.25:471][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2020.04.29-20.32.25:485][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2020.04.29-20.32.25:574][  0]LogShaderCompilers: Guid format shader working directory is -4 characters bigger than the processId version (../../../../../adale/Desktop/2DSouls/SideScroller/Intermediate/Shaders/WorkingDirectory/10072/).
+[2020.04.29-20.32.25:574][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/adale/AppData/Local/Temp/UnrealShaderWorkingDir/1A86382C497071C8738B35ACD0700FF8/'.
+[2020.04.29-20.32.25:575][  0]LogXGEController: Cleaning working directory: C:/Users/adale/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2020.04.29-20.32.25:575][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2020.04.29-20.32.25:576][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2020.04.29-20.32.25:576][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2020.04.29-20.32.26:358][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2020.04.29-20.32.26:428][  0]LogDerivedDataCache: Loaded boot cache 0.07s 78MB C:/Users/adale/AppData/Local/UnrealEngine/4.24/DerivedDataCache/Boot.ddc.
+[2020.04.29-20.32.26:428][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/adale/AppData/Local/UnrealEngine/4.24/DerivedDataCache/Boot.ddc
+[2020.04.29-20.32.26:429][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../adale/Desktop/2DSouls/SideScroller/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2020.04.29-20.32.26:429][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2020.04.29-20.32.26:429][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../adale/Desktop/2DSouls/SideScroller/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2020.04.29-20.32.26:429][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2020.04.29-20.32.26:440][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2020.04.29-20.32.26:440][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2020.04.29-20.32.26:440][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2020.04.29-20.32.26:444][  0]LogDerivedDataCache: Using Local data cache path C:/Users/adale/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2020.04.29-20.32.26:444][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2020.04.29-20.32.26:444][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2020.04.29-20.32.26:472][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2020.04.29-20.32.26:475][  0]LogSlate: Using FreeType 2.10.0
+[2020.04.29-20.32.26:476][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2020.04.29-20.32.26:551][  0]LogAssetRegistry: FAssetRegistry took 0.0067 seconds to start up
+[2020.04.29-20.32.26:849][  0]LogInit: Selected Device Profile: [Windows]
+[2020.04.29-20.32.27:041][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2020.04.29-20.32.27:042][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2020.04.29-20.32.27:042][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2020.04.29-20.32.27:042][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2020.04.29-20.32.27:042][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2020.04.29-20.32.27:058][  0]LogNetVersion: SideScroller 1.0.0, NetCL: 10570792, EngineNetVer: 13, GameNetVer: 0 (Checksum: 2260462969)
+[2020.04.29-20.32.28:283][  0]LogPackageLocalizationCache: Processed 10 localized package path(s) for 1 prioritized culture(s) in 0.061052 seconds
+[2020.04.29-20.32.28:292][  0]LogUObjectArray: 46750 objects as part of root set at end of initial load.
+[2020.04.29-20.32.28:293][  0]LogUObjectAllocator: 8137160 out of 0 bytes used by permanent object pool.
+[2020.04.29-20.32.28:293][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2020.04.29-20.32.28:992][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2020.04.29-20.32.29:000][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2020.04.29-20.32.29:156][  0]SourceControl: Source control is disabled
+[2020.04.29-20.32.29:156][  0]SourceControl: Source control is disabled
+[2020.04.29-20.32.29:160][  0]SourceControl: Source control is disabled
+[2020.04.29-20.32.29:163][  0]SourceControl: Source control is disabled
+[2020.04.29-20.32.29:167][  0]SourceControl: Source control is disabled
+[2020.04.29-20.32.29:355][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2020.04.29-20.32.29:382][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2020.04.29-20.32.29:382][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2020.04.29-20.32.29:493][  0]LogOcInput: OculusInput pre-init called
+[2020.04.29-20.32.29:506][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
+[2020.04.29-20.32.29:506][  0]LogWindows: File 'OVRPlugin.dll' does not exist
+[2020.04.29-20.32.29:600][  0]LogEngine: Initializing Engine...
+[2020.04.29-20.32.29:601][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.04.29-20.32.29:602][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2020.04.29-20.32.29:954][  0]LogInit: Initializing FReadOnlyCVARCache
+[2020.04.29-20.32.29:965][  0]LogAIModule: Creating AISystem for world Untitled
+[2020.04.29-20.32.29:990][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.04.29-20.32.29:990][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.04.29-20.32.29:990][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.04.29-20.32.29:990][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.04.29-20.32.29:991][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.04.29-20.32.29:991][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.04.29-20.32.29:991][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.04.29-20.32.29:991][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.04.29-20.32.29:992][  0]LogAudio: Display: Using built-in audio occlusion.
+[2020.04.29-20.32.29:992][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2020.04.29-20.32.30:021][  0]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.04.29-20.32.30:021][  0]LogAudioMixer: Display: Name: Speakers / Headphones (Realtek Audio)
+[2020.04.29-20.32.30:021][  0]LogAudioMixer: Display: Is Default: Yes
+[2020.04.29-20.32.30:021][  0]LogAudioMixer: Display: Sample Rate: 48000
+[2020.04.29-20.32.30:021][  0]LogAudioMixer: Display: Channel Count Used: 2
+[2020.04.29-20.32.30:022][  0]LogAudioMixer: Display: Device Channel Count: 2
+[2020.04.29-20.32.30:022][  0]LogAudioMixer: Display: Channel Order:
+[2020.04.29-20.32.30:022][  0]LogAudioMixer: Display: 0: FrontLeft
+[2020.04.29-20.32.30:022][  0]LogAudioMixer: Display: 1: FrontRight
+[2020.04.29-20.32.31:190][  0]LogAudioMixer: Display: Using Audio Device Speakers / Headphones (Realtek Audio)
+[2020.04.29-20.32.31:197][  0]LogInit: FAudioDevice initialized.
+[2020.04.29-20.32.31:197][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2020.04.29-20.32.31:299][  0]LogDerivedDataCache: Saved boot cache 0.10s 78MB C:/Users/adale/AppData/Local/UnrealEngine/4.24/DerivedDataCache/Boot.ddc.
+[2020.04.29-20.32.31:305][  0]LogInit: Texture streaming: Enabled
+[2020.04.29-20.32.31:328][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2020.04.29-20.32.31:328][  0]LogEngineSessionManager: EngineSessionManager sent abnormal shutdown report. Type=Debugger, SessionId={9AA929DD-492F-986B-C3E4-8EACCBB72694}
+[2020.04.29-20.32.31:329][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
+[2020.04.29-20.32.31:331][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
+[2020.04.29-20.32.31:403][  0]LogInit: Transaction tracking system initialized
+[2020.04.29-20.32.31:434][  0]BlueprintLog: New page: Editor Load
+[2020.04.29-20.32.31:515][  0]LocalizationService: Localization service is disabled
+[2020.04.29-20.32.32:011][  0]LogFileCache: Scanning file cache for directory 'D:/adale/Desktop/2DSouls/SideScroller/Content/' took 0.01s
+[2020.04.29-20.32.32:011][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2020.04.29-20.32.32:011][  0]LogCook: Display: Mobile HDR setting 1
+[2020.04.29-20.32.32:935][  0]SourceControl: Source control is disabled
+[2020.04.29-20.32.32:936][  0]Cmd: MAP LOAD FILE="../../../../../adale/Desktop/2DSouls/SideScroller/Content/Levels/World.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2020.04.29-20.32.32:936][  0]LightingResults: New page: Lighting Build
+[2020.04.29-20.32.32:938][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.32.32:938][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.32.32:938][  0]MapCheck: New page: Map Check
+[2020.04.29-20.32.32:938][  0]LightingResults: New page: Lighting Build
+[2020.04.29-20.32.32:967][  0]LogUObjectHash: Compacting FUObjectHashTables data took   3.10ms
+[2020.04.29-20.32.33:127][  0]LogAIModule: Creating AISystem for world World
+[2020.04.29-20.32.33:138][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2020.04.29-20.32.33:169][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.53ms
+[2020.04.29-20.32.33:169][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2020.04.29-20.32.33:170][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.257ms to complete.
+[2020.04.29-20.32.33:170][  0]LogFileHelpers: Loading map 'World' took 0.235
+[2020.04.29-20.32.33:337][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.32.33:344][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.32.33:352][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.32.33:360][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.32.33:367][  0]LogCollectionManager: Loaded 0 collections in 0.001285 seconds
+[2020.04.29-20.32.33:394][  0]LogFileCache: Scanning file cache for directory 'D:/adale/Desktop/2DSouls/SideScroller/Saved/Collections/' took 0.00s
+[2020.04.29-20.32.33:394][  0]LogFileCache: Scanning file cache for directory 'D:/adale/Desktop/2DSouls/SideScroller/Content/Developers/adale/Collections/' took 0.00s
+[2020.04.29-20.32.33:394][  0]LogFileCache: Scanning file cache for directory 'D:/adale/Desktop/2DSouls/SideScroller/Content/Collections/' took 0.00s
+[2020.04.29-20.32.33:394][  0]LogContentBrowser: Native class hierarchy populated in 0.0120 seconds. Added 3020 classes and 719 folders.
+[2020.04.29-20.32.33:397][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2020.04.29-20.32.33:486][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0006 seconds. Added 0 classes and 0 folders.
+[2020.04.29-20.32.33:496][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0008 seconds. Added 2 classes and 3 folders.
+[2020.04.29-20.32.33:532][  0]LogSlate: Took 0.000422 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2020.04.29-20.32.33:536][  0]LogSlate: Took 0.000360 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2020.04.29-20.32.33:541][  0]LogSlate: Took 0.000238 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2020.04.29-20.32.33:637][  0]LogRenderer: Reallocating scene render targets to support 1108x572 Format 10 NumSamples 1 (Frame:1).
+[2020.04.29-20.32.33:757][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0005 seconds. Added 0 classes and 0 folders.
+[2020.04.29-20.32.33:758][  0]LogLoad: (Engine Initialization) Total time: 12.31 seconds
+[2020.04.29-20.32.33:758][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2020.04.29-20.32.33:823][  0]LogAssetRegistry: Asset discovery search completed in 7.2760 seconds
+[2020.04.29-20.32.33:827][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000063 seconds (updated 0 objects)
+[2020.04.29-20.32.33:828][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2020.04.29-20.32.33:867][  0]LogSlate: Took 0.000303 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2020.04.29-20.32.48:041][318]Candidate modules for hot reload:
+[2020.04.29-20.32.48:041][318]  SideScroller
+[2020.04.29-20.32.48:041][318]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_4.24/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=SideScroller,2232 Win64 Development -TargetType=Editor -Project="D:/adale/Desktop/2DSouls/SideScroller/SideScroller.uproject" "D:/adale/Desktop/2DSouls/SideScroller/SideScroller.uproject"  -IgnoreJunk]
+[2020.04.29-20.32.48:043][318]Warning: Starting HotReload took  0.4s.
+[2020.04.29-20.32.52:401][564]CompilerResultsLog: New page: Compilation - Apr. 29, 2020, 12:32:52 p.m.
+[2020.04.29-20.32.52:402][564]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\adale\Desktop\2DSouls).
+[2020.04.29-20.32.52:402][564]CompilerResultsLog: Building SideScrollerEditor...
+[2020.04.29-20.32.52:402][564]CompilerResultsLog: Using Visual Studio 2019 14.24.28316 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314) and Windows 10.0.18362.0 SDK (D:\Windows Kits\10).
+[2020.04.29-20.32.52:402][564]CompilerResultsLog: Building 4 actions with 8 processes...
+[2020.04.29-20.32.52:403][564]CompilerResultsLog:   [1/4] MyPawn.cpp
+[2020.04.29-20.32.52:403][564]CompilerResultsLog:   [2/4] UE4Editor-SideScroller-2232.lib
+[2020.04.29-20.32.52:403][564]CompilerResultsLog:      Creating library D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller-2232.lib and object D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller-2232.exp
+[2020.04.29-20.32.52:403][564]CompilerResultsLog:   [3/4] UE4Editor-SideScroller-2232.dll
+[2020.04.29-20.32.52:403][564]CompilerResultsLog:      Creating library D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller-2232.suppressed.lib and object D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller-2232.suppressed.exp
+[2020.04.29-20.32.52:403][564]CompilerResultsLog:   [4/4] SideScrollerEditor.target
+[2020.04.29-20.32.52:403][564]CompilerResultsLog: Total time in Parallel executor: 2.57 seconds
+[2020.04.29-20.32.52:403][564]CompilerResultsLog: Total execution time: 4.22 seconds
+[2020.04.29-20.32.52:403][564]LogMainFrame: MainFrame: Module compiling took 4.368 seconds
+[2020.04.29-20.32.52:428][564]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2020.04.29-20.32.52:468][564]LogClass: UPlayerState HotReload.
+[2020.04.29-20.32.52:476][564]LogContentBrowser: Native class hierarchy updated for 'SideScroller' in 0.0007 seconds. Added 5 classes and 2 folders.
+[2020.04.29-20.32.52:481][564]Display: HotReload successful (5 functions remapped  0 scriptstructs remapped)
+[2020.04.29-20.32.52:558][564]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2020.04.29-20.32.52:572][564]LogContentBrowser: Native class hierarchy populated in 0.0097 seconds. Added 3022 classes and 722 folders.
+[2020.04.29-20.32.52:573][564]Display: HotReload took  4.9s.
+[2020.04.29-20.32.53:355][610]LogTemp: Repeating last play command: Selected Viewport
+[2020.04.29-20.32.53:373][610]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.04.29-20.32.53:373][610]PIE: New page: PIE session: World (Apr. 29, 2020, 12:32:53 p.m.)
+[2020.04.29-20.32.53:376][610]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2020.04.29-20.32.53:379][610]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+[2020.04.29-20.32.53:380][610]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_World
+[2020.04.29-20.32.53:383][610]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002705s)
+[2020.04.29-20.32.53:385][610]LogAIModule: Creating AISystem for world World
+[2020.04.29-20.32.53:385][610]LogPlayLevel: PIE: World Init took: (0.002170s)
+[2020.04.29-20.32.53:385][610]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/World.World to /Game/Levels/UEDPIE_0_World.World (0.005732s)
+[2020.04.29-20.32.53:410][610]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2020.04.29-20.32.53:411][610]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.04.29-20.32.53:412][610]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.04.29-20.32.53:412][610]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.04.29-20.32.53:412][610]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.04.29-20.32.53:412][610]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.04.29-20.32.53:412][610]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.04.29-20.32.53:412][610]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.04.29-20.32.53:413][610]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.04.29-20.32.53:413][610]LogAudio: Display: Using built-in audio occlusion.
+[2020.04.29-20.32.53:413][610]LogAudioMixer: Display: Initializing audio mixer.
+[2020.04.29-20.32.53:429][610]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.04.29-20.32.53:429][610]LogAudioMixer: Display: Name: Speakers / Headphones (Realtek Audio)
+[2020.04.29-20.32.53:429][610]LogAudioMixer: Display: Is Default: Yes
+[2020.04.29-20.32.53:429][610]LogAudioMixer: Display: Sample Rate: 48000
+[2020.04.29-20.32.53:430][610]LogAudioMixer: Display: Channel Count Used: 2
+[2020.04.29-20.32.53:430][610]LogAudioMixer: Display: Device Channel Count: 2
+[2020.04.29-20.32.53:430][610]LogAudioMixer: Display: Channel Order:
+[2020.04.29-20.32.53:430][610]LogAudioMixer: Display: 0: FrontLeft
+[2020.04.29-20.32.53:430][610]LogAudioMixer: Display: 1: FrontRight
+[2020.04.29-20.32.53:521][610]LogAudioMixer: Display: Using Audio Device Speakers / Headphones (Realtek Audio)
+[2020.04.29-20.32.53:526][610]LogInit: FAudioDevice initialized.
+[2020.04.29-20.32.53:653][610]LogLoad: Game class is 'BP_SideScrollerGameModeBase_C'
+[2020.04.29-20.32.53:656][610]LogWorld: Bringing World /Game/Levels/UEDPIE_0_World.World up for play (max tick rate 60) at 2020.04.29-16.32.53
+[2020.04.29-20.32.53:657][610]LogWorld: Bringing up level for play took: 0.001520
+[2020.04.29-20.32.53:657][610]LogOnline: OSS: Creating online subsystem instance for: :Context_3
+[2020.04.29-20.32.53:690][610]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0004 seconds. Added 20 classes and 0 folders.
+[2020.04.29-20.32.53:692][610]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_World -0.112
+[2020.04.29-20.33.04:649][266]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.33.04:649][266]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.33.04:650][266]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.33.04:650][266]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_World
+[2020.04.29-20.33.04:650][266]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.33.04:651][266]LogWorld: UWorld::CleanupWorld for World, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.33.04:652][266]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.33.04:666][266]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2020.04.29-20.33.04:669][266]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.33.04:698][266]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.33.04:707][266]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.33.04:712][266]LogUObjectHash: Compacting FUObjectHashTables data took   2.82ms
+[2020.04.29-20.33.04:756][268]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2020.04.29-20.33.20:010][139]LogSlate: Took 0.000259 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2020.04.29-20.33.20:051][139]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprint/BP_BeastPawn.BP_BeastPawn
+[2020.04.29-20.33.20:272][139]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0010 seconds. Added 121 classes and 0 folders.
+[2020.04.29-20.33.23:824][295]LogSlate: Window 'BP_BeastPawn' being destroyed
+[2020.04.29-20.33.23:830][295]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.33.23:830][295]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.33.23:893][295]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprint/BP_BeastPawn.BP_BeastPawn
+[2020.04.29-20.33.24:288][295]LogSlate: Took 0.000288 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2020.04.29-20.33.30:492][649]LogSlate: Took 0.000235 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2020.04.29-20.34.47:422][144]LogSlate: Window 'BP_BeastPawn' being destroyed
+[2020.04.29-20.34.47:427][144]LogSlate: Window 'BP_BeastPawn' being destroyed
+[2020.04.29-20.34.47:438][144]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.34.47:438][144]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.35.09:704][405]LogFactory: FactoryCreateFile: Texture with ReimportTextureFactory (0 0 D:\adale\Pictures\Assets\OcO\AllCharacters\Golem\noBKG_GolemDeath_strip.png)
+[2020.04.29-20.35.09:750][405]LogTexture: Display: Building textures: noBKG_GolemDeath_strip (AutoDXT, 1792X64)
+[2020.04.29-20.35.42:538][290]LogSlate: Window 'Extract sprites' being destroyed
+[2020.04.29-20.36.05:114][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_0FADF7C4844106515D6947CB5E6B15B23.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_0.uasset'
+[2020.04.29-20.36.05:138][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_12C69127541BA0AD90F937DA31251BF99.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_1.uasset'
+[2020.04.29-20.36.05:165][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_22A56F8EB4AF891FAB2416B829B4C0124.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_2.uasset'
+[2020.04.29-20.36.05:189][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_3027711CC4382F06C4D4ED0A4910A127D.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_3.uasset'
+[2020.04.29-20.36.05:222][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_43F83A7C941A72B473D6551931FA749F2.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_4.uasset'
+[2020.04.29-20.36.05:246][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_5F0CB6E624DE0B31A1E30B1B202432C5D.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_5.uasset'
+[2020.04.29-20.36.05:276][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_66D2E7AA6466A7E886A7B76AF6370B1B2.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_6.uasset'
+[2020.04.29-20.36.05:304][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_73461FFA747140F70C9DD3C9168B36C81.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_7.uasset'
+[2020.04.29-20.36.05:336][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_8EF09748F47494AFFA92EFEA06B9E6052.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_8.uasset'
+[2020.04.29-20.36.05:364][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_9D2FE1BE746E4E8D8EB680E8D4808E5AE.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_9.uasset'
+[2020.04.29-20.36.05:405][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_10F3C94F584543B1F93A8242AF3CF6462B.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_10.uasset'
+[2020.04.29-20.36.05:434][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_11C17BED2C471505D9551CD398C5C0BDF9.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_11.uasset'
+[2020.04.29-20.36.05:469][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_12C8E1F3C74CEEEE7AF7179585AD220808.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_12.uasset'
+[2020.04.29-20.36.05:499][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_1315750CC64C148D3A83BE399D995B2BDE.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_13.uasset'
+[2020.04.29-20.36.05:524][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_143B7AAAA74D835B854122E9B5B184359A.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_14.uasset'
+[2020.04.29-20.36.05:553][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_155277627A468EEF7DFC165CAA2E4DC272.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_15.uasset'
+[2020.04.29-20.36.05:582][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_16FBFD04E8447C133442FDE4B81B2D70FE.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_16.uasset'
+[2020.04.29-20.36.05:604][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_17431196B2465C713929616D947E7B4073.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_17.uasset'
+[2020.04.29-20.36.05:630][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_18D9E72BFE46D5F7D53149519686D5F1FB.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_18.uasset'
+[2020.04.29-20.36.05:653][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_195C206146453E9BF0DC4CF4A9F0788FE8.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_19.uasset'
+[2020.04.29-20.36.05:690][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_20959437EA41BCCC2CF89A59B1964C70BD.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_20.uasset'
+[2020.04.29-20.36.05:716][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_21D899ECF444EB49EB0A99A08030647770.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_21.uasset'
+[2020.04.29-20.36.05:743][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_22472A722947DFAA3C937E108EE8FED917.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_22.uasset'
+[2020.04.29-20.36.05:767][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_23792A083A4E1260FFB8DAF29D23657952.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_23.uasset'
+[2020.04.29-20.36.05:795][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_246D23F6724442E3396D4F8FA7F8CE314D.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_24.uasset'
+[2020.04.29-20.36.05:817][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_25455745AE43E966FDD3A9909ABDA2B06F.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_25.uasset'
+[2020.04.29-20.36.05:838][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_26BD852F5848F8D4F7802087970898F001.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_26.uasset'
+[2020.04.29-20.36.05:859][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_275C27957E4BB84B47C2D514A17928F8A9.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_27.uasset'
+[2020.04.29-20.36.05:889][567]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_28628457A144A8409398DE0D96AD008FCB.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_28.uasset'
+[2020.04.29-20.36.09:061][567]LogUObjectHash: Compacting FUObjectHashTables data took   3.58ms
+[2020.04.29-20.36.09:092][567]LogUObjectHash: Compacting FUObjectHashTables data took   1.55ms
+[2020.04.29-20.36.09:120][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2020.04.29-20.36.09:146][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2020.04.29-20.36.09:173][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2020.04.29-20.36.09:200][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2020.04.29-20.36.09:229][567]LogUObjectHash: Compacting FUObjectHashTables data took   1.29ms
+[2020.04.29-20.36.09:259][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2020.04.29-20.36.09:287][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2020.04.29-20.36.09:315][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2020.04.29-20.36.09:344][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2020.04.29-20.36.09:371][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2020.04.29-20.36.09:401][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2020.04.29-20.36.09:428][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2020.04.29-20.36.09:456][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2020.04.29-20.36.09:492][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2020.04.29-20.36.09:524][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2020.04.29-20.36.09:551][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2020.04.29-20.36.09:575][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2020.04.29-20.36.09:605][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2020.04.29-20.36.09:630][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2020.04.29-20.36.09:660][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2020.04.29-20.36.09:693][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2020.04.29-20.36.09:725][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2020.04.29-20.36.09:754][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2020.04.29-20.36.09:782][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2020.04.29-20.36.09:805][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2020.04.29-20.36.09:832][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2020.04.29-20.36.09:860][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2020.04.29-20.36.09:902][567]LogUObjectHash: Compacting FUObjectHashTables data took   2.54ms
+[2020.04.29-20.36.09:936][567]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2020.04.29-20.36.10:137][567]AssetCheck: New page: Asset Save: multiple assets
+[2020.04.29-20.36.10:137][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_0.noBKG_GolemDeath_strip_Sprite_0
+[2020.04.29-20.36.10:137][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_1.noBKG_GolemDeath_strip_Sprite_1
+[2020.04.29-20.36.10:137][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_2.noBKG_GolemDeath_strip_Sprite_2
+[2020.04.29-20.36.10:138][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_3.noBKG_GolemDeath_strip_Sprite_3
+[2020.04.29-20.36.10:138][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_4.noBKG_GolemDeath_strip_Sprite_4
+[2020.04.29-20.36.10:138][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_5.noBKG_GolemDeath_strip_Sprite_5
+[2020.04.29-20.36.10:138][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_6.noBKG_GolemDeath_strip_Sprite_6
+[2020.04.29-20.36.10:138][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_7.noBKG_GolemDeath_strip_Sprite_7
+[2020.04.29-20.36.10:138][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_8.noBKG_GolemDeath_strip_Sprite_8
+[2020.04.29-20.36.10:139][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_9.noBKG_GolemDeath_strip_Sprite_9
+[2020.04.29-20.36.10:139][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_10.noBKG_GolemDeath_strip_Sprite_10
+[2020.04.29-20.36.10:139][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_11.noBKG_GolemDeath_strip_Sprite_11
+[2020.04.29-20.36.10:139][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_12.noBKG_GolemDeath_strip_Sprite_12
+[2020.04.29-20.36.10:139][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_13.noBKG_GolemDeath_strip_Sprite_13
+[2020.04.29-20.36.10:139][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_14.noBKG_GolemDeath_strip_Sprite_14
+[2020.04.29-20.36.10:139][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_15.noBKG_GolemDeath_strip_Sprite_15
+[2020.04.29-20.36.10:140][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_16.noBKG_GolemDeath_strip_Sprite_16
+[2020.04.29-20.36.10:140][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_17.noBKG_GolemDeath_strip_Sprite_17
+[2020.04.29-20.36.10:140][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_18.noBKG_GolemDeath_strip_Sprite_18
+[2020.04.29-20.36.10:140][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_19.noBKG_GolemDeath_strip_Sprite_19
+[2020.04.29-20.36.10:140][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_20.noBKG_GolemDeath_strip_Sprite_20
+[2020.04.29-20.36.10:140][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_21.noBKG_GolemDeath_strip_Sprite_21
+[2020.04.29-20.36.10:141][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_22.noBKG_GolemDeath_strip_Sprite_22
+[2020.04.29-20.36.10:141][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_23.noBKG_GolemDeath_strip_Sprite_23
+[2020.04.29-20.36.10:141][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_24.noBKG_GolemDeath_strip_Sprite_24
+[2020.04.29-20.36.10:141][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_25.noBKG_GolemDeath_strip_Sprite_25
+[2020.04.29-20.36.10:141][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_26.noBKG_GolemDeath_strip_Sprite_26
+[2020.04.29-20.36.10:141][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_27.noBKG_GolemDeath_strip_Sprite_27
+[2020.04.29-20.36.10:141][567]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_28.noBKG_GolemDeath_strip_Sprite_28
+[2020.04.29-20.36.13:203][725]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_stripD3A9412C4E8BA2878B68C88F86F9C418.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Texture/Beast/BeastDeath/noBKG_GolemDeath_strip.uasset'
+[2020.04.29-20.36.13:225][725]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip
+[2020.04.29-20.36.13:225][725]LogContentValidation: Display: Validating Texture2D /Game/Texture/Beast/BeastDeath/noBKG_GolemDeath_strip.noBKG_GolemDeath_strip
+[2020.04.29-20.36.29:067][662]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_0.noBKG_GolemDeath_strip_Sprite_0
+[2020.04.29-20.36.29:508][662]LogRenderer: Reallocating scene render targets to support 1180x916 Format 10 NumSamples 1 (Frame:1).
+[2020.04.29-20.36.35:617][ 14]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_0B7F88BA34E5964E7EDC34B953E0C2028.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_0.uasset'
+[2020.04.29-20.36.35:636][ 14]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_0
+[2020.04.29-20.36.35:637][ 14]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_0.noBKG_GolemDeath_strip_Sprite_0
+[2020.04.29-20.36.43:545][393]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_1.noBKG_GolemDeath_strip_Sprite_1
+[2020.04.29-20.36.49:831][749]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_1AE5D06F54F7E085FDE6928B7430B53CD.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_1.uasset'
+[2020.04.29-20.36.49:857][749]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_1
+[2020.04.29-20.36.49:857][749]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_1.noBKG_GolemDeath_strip_Sprite_1
+[2020.04.29-20.36.53:193][934]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_2.noBKG_GolemDeath_strip_Sprite_2
+[2020.04.29-20.37.01:105][382]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_2E25E01074F45D06411470FAAA96094E4.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_2.uasset'
+[2020.04.29-20.37.01:126][382]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_2
+[2020.04.29-20.37.01:127][382]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_2.noBKG_GolemDeath_strip_Sprite_2
+[2020.04.29-20.37.02:624][458]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_3.noBKG_GolemDeath_strip_Sprite_3
+[2020.04.29-20.37.06:692][677]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_379DD3CEC4C8AC3C9EDDBE5A515396A92.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_3.uasset'
+[2020.04.29-20.37.06:739][677]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_3
+[2020.04.29-20.37.06:739][677]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_3.noBKG_GolemDeath_strip_Sprite_3
+[2020.04.29-20.37.08:057][743]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_4.noBKG_GolemDeath_strip_Sprite_4
+[2020.04.29-20.37.12:731][  0]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_4DDBEDDEF4BB690B292D7E3A4712E8085.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_4.uasset'
+[2020.04.29-20.37.12:753][  0]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_4
+[2020.04.29-20.37.12:753][  0]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_4.noBKG_GolemDeath_strip_Sprite_4
+[2020.04.29-20.37.14:538][ 92]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_5.noBKG_GolemDeath_strip_Sprite_5
+[2020.04.29-20.37.21:866][504]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_56D1F1C614F680AD893E9F58E3602AA6D.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_5.uasset'
+[2020.04.29-20.37.21:890][504]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_5
+[2020.04.29-20.37.21:890][504]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_5.noBKG_GolemDeath_strip_Sprite_5
+[2020.04.29-20.37.23:536][591]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_6.noBKG_GolemDeath_strip_Sprite_6
+[2020.04.29-20.37.35:718][290]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_6482289734ABE28BC1BBB4691BECC7C39.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_6.uasset'
+[2020.04.29-20.37.35:740][290]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_6
+[2020.04.29-20.37.35:740][290]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_6.noBKG_GolemDeath_strip_Sprite_6
+[2020.04.29-20.37.45:683][868]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_7.noBKG_GolemDeath_strip_Sprite_7
+[2020.04.29-20.37.49:419][ 65]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_758E10B47412B081FC47E52B351A21FDE.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_7.uasset'
+[2020.04.29-20.37.49:437][ 65]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_7
+[2020.04.29-20.37.49:438][ 65]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_7.noBKG_GolemDeath_strip_Sprite_7
+[2020.04.29-20.37.50:900][138]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_8.noBKG_GolemDeath_strip_Sprite_8
+[2020.04.29-20.37.55:038][364]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_83A02EFBB4F439AD4A07BC7B7FCF23B85.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_8.uasset'
+[2020.04.29-20.37.55:061][364]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_8
+[2020.04.29-20.37.55:061][364]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_8.noBKG_GolemDeath_strip_Sprite_8
+[2020.04.29-20.37.56:727][447]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_9.noBKG_GolemDeath_strip_Sprite_9
+[2020.04.29-20.38.01:330][693]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_920ABB24F416B09E36C93FF8889DD7330.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_9.uasset'
+[2020.04.29-20.38.01:353][693]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_9
+[2020.04.29-20.38.01:353][693]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_9.noBKG_GolemDeath_strip_Sprite_9
+[2020.04.29-20.38.02:980][774]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_10.noBKG_GolemDeath_strip_Sprite_10
+[2020.04.29-20.38.06:475][958]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_107DC8747C44019B4D4BD5E48174EA0EEB.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_10.uasset'
+[2020.04.29-20.38.06:498][958]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_10
+[2020.04.29-20.38.06:498][958]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_10.noBKG_GolemDeath_strip_Sprite_10
+[2020.04.29-20.38.07:928][ 32]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_11.noBKG_GolemDeath_strip_Sprite_11
+[2020.04.29-20.38.11:889][244]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_11D798EE93459743ADA0ACCFB36F2E35A1.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_11.uasset'
+[2020.04.29-20.38.11:907][244]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_11
+[2020.04.29-20.38.11:907][244]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_11.noBKG_GolemDeath_strip_Sprite_11
+[2020.04.29-20.38.14:323][372]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_12.noBKG_GolemDeath_strip_Sprite_12
+[2020.04.29-20.38.18:335][591]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_12575B1268496FC1E7D9BF62AB1113F5F1.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_12.uasset'
+[2020.04.29-20.38.18:352][591]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_12
+[2020.04.29-20.38.18:352][591]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_12.noBKG_GolemDeath_strip_Sprite_12
+[2020.04.29-20.38.20:070][678]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_13.noBKG_GolemDeath_strip_Sprite_13
+[2020.04.29-20.38.24:906][941]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_1348CCA9F14D2987B0DB5896907D5BF9F2.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_13.uasset'
+[2020.04.29-20.38.24:928][941]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_13
+[2020.04.29-20.38.24:928][941]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_13.noBKG_GolemDeath_strip_Sprite_13
+[2020.04.29-20.38.26:490][ 21]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_14.noBKG_GolemDeath_strip_Sprite_14
+[2020.04.29-20.38.30:408][228]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_147E5604A64CF85A9248B204BBC7D87399.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_14.uasset'
+[2020.04.29-20.38.30:427][228]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_14
+[2020.04.29-20.38.30:428][228]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_14.noBKG_GolemDeath_strip_Sprite_14
+[2020.04.29-20.38.31:720][292]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_15.noBKG_GolemDeath_strip_Sprite_15
+[2020.04.29-20.38.35:192][476]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_151E696127431EB7166A3553934B16025D.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_15.uasset'
+[2020.04.29-20.38.35:215][476]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_15
+[2020.04.29-20.38.35:216][476]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_15.noBKG_GolemDeath_strip_Sprite_15
+[2020.04.29-20.38.36:736][553]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_16.noBKG_GolemDeath_strip_Sprite_16
+[2020.04.29-20.38.40:833][772]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_16FD7E4F944D20EA54EEBE32A33AD5286E.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_16.uasset'
+[2020.04.29-20.38.40:854][772]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_16
+[2020.04.29-20.38.40:854][772]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_16.noBKG_GolemDeath_strip_Sprite_16
+[2020.04.29-20.38.42:169][837]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_17.noBKG_GolemDeath_strip_Sprite_17
+[2020.04.29-20.38.46:701][ 84]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_17AF2F422B48CE4BA586EA0BA214C5E607.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_17.uasset'
+[2020.04.29-20.38.46:722][ 84]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_17
+[2020.04.29-20.38.46:723][ 84]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_17.noBKG_GolemDeath_strip_Sprite_17
+[2020.04.29-20.38.48:100][153]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_18.noBKG_GolemDeath_strip_Sprite_18
+[2020.04.29-20.38.51:850][350]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_18DB4B4991410DBEFE1E0DAF991ABF8C08.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_18.uasset'
+[2020.04.29-20.38.51:869][350]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_18
+[2020.04.29-20.38.51:869][350]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_18.noBKG_GolemDeath_strip_Sprite_18
+[2020.04.29-20.38.53:301][419]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_19.noBKG_GolemDeath_strip_Sprite_19
+[2020.04.29-20.38.57:251][627]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_19DA61CFF84AF6DF398E4F64A2F8D9FFBE.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_19.uasset'
+[2020.04.29-20.38.57:271][627]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_19
+[2020.04.29-20.38.57:271][627]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_19.noBKG_GolemDeath_strip_Sprite_19
+[2020.04.29-20.38.58:716][701]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_20.noBKG_GolemDeath_strip_Sprite_20
+[2020.04.29-20.39.02:048][868]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_20242A60574F23D2B0A3DFDF84E48D6E31.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_20.uasset'
+[2020.04.29-20.39.02:068][868]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_20
+[2020.04.29-20.39.02:068][868]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_20.noBKG_GolemDeath_strip_Sprite_20
+[2020.04.29-20.39.03:680][951]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_21.noBKG_GolemDeath_strip_Sprite_21
+[2020.04.29-20.39.08:425][205]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_21616A89AA4C98C9BA261206B1ECC82A9E.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_21.uasset'
+[2020.04.29-20.39.08:445][205]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_21
+[2020.04.29-20.39.08:445][205]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_21.noBKG_GolemDeath_strip_Sprite_21
+[2020.04.29-20.39.09:978][278]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_22.noBKG_GolemDeath_strip_Sprite_22
+[2020.04.29-20.39.13:263][444]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_22FE7F637B426F960139C5D1B00BD71540.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_22.uasset'
+[2020.04.29-20.39.13:281][444]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_22
+[2020.04.29-20.39.13:281][444]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_22.noBKG_GolemDeath_strip_Sprite_22
+[2020.04.29-20.39.14:714][515]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_23.noBKG_GolemDeath_strip_Sprite_23
+[2020.04.29-20.39.18:309][701]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_2383821D424708C7DF84C56AAEDF90C27A.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_23.uasset'
+[2020.04.29-20.39.18:330][701]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_23
+[2020.04.29-20.39.18:330][701]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_23.noBKG_GolemDeath_strip_Sprite_23
+[2020.04.29-20.39.20:143][794]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_24.noBKG_GolemDeath_strip_Sprite_24
+[2020.04.29-20.39.23:921][993]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_244402ACF24CEDAC027A6658BEA66C1AD4.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_24.uasset'
+[2020.04.29-20.39.23:941][993]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_24
+[2020.04.29-20.39.23:941][993]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_24.noBKG_GolemDeath_strip_Sprite_24
+[2020.04.29-20.39.25:426][ 68]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_25.noBKG_GolemDeath_strip_Sprite_25
+[2020.04.29-20.39.29:820][297]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_25C5DE37744431DE6188AAE2B211D9F4A1.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_25.uasset'
+[2020.04.29-20.39.29:843][297]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_25
+[2020.04.29-20.39.29:843][297]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_25.noBKG_GolemDeath_strip_Sprite_25
+[2020.04.29-20.39.31:423][370]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_26.noBKG_GolemDeath_strip_Sprite_26
+[2020.04.29-20.39.36:391][637]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_26C5D5D9F941F94825762CF887DF4AB1C0.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_26.uasset'
+[2020.04.29-20.39.36:411][637]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_26
+[2020.04.29-20.39.36:411][637]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_26.noBKG_GolemDeath_strip_Sprite_26
+[2020.04.29-20.39.43:803][ 59]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_27.noBKG_GolemDeath_strip_Sprite_27
+[2020.04.29-20.39.48:088][284]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_27A73688734F7032E9F027099077FB9D06.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_27.uasset'
+[2020.04.29-20.39.48:104][284]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_27
+[2020.04.29-20.39.48:104][284]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_27.noBKG_GolemDeath_strip_Sprite_27
+[2020.04.29-20.39.50:167][389]LogAssetEditorSubsystem: Opening Asset editor for PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_28.noBKG_GolemDeath_strip_Sprite_28
+[2020.04.29-20.39.57:164][779]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/noBKG_GolemDeath_strip_Sprite_28C73215144A164015E902229B14D4D14C.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_28.uasset'
+[2020.04.29-20.39.57:187][779]AssetCheck: New page: Asset Save: noBKG_GolemDeath_strip_Sprite_28
+[2020.04.29-20.39.57:187][779]LogContentValidation: Display: Validating PaperSprite /Game/Sprites/Beast/Death/noBKG_GolemDeath_strip_Sprite_28.noBKG_GolemDeath_strip_Sprite_28
+[2020.04.29-20.40.01:735][ 31]LogWorld: UWorld::CleanupWorld for World_33, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.01:735][ 31]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.02:705][ 79]LogWorld: UWorld::CleanupWorld for World_32, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.02:705][ 79]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.03:363][114]LogWorld: UWorld::CleanupWorld for World_31, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.03:363][114]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.04:145][156]LogWorld: UWorld::CleanupWorld for World_30, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.04:145][156]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.04:844][192]LogWorld: UWorld::CleanupWorld for World_29, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.04:844][192]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.05:339][218]LogWorld: UWorld::CleanupWorld for World_28, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.05:339][218]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.08:093][366]LogWorld: UWorld::CleanupWorld for World_27, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.08:093][366]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.09:115][418]LogWorld: UWorld::CleanupWorld for World_26, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.09:115][418]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.09:612][444]LogWorld: UWorld::CleanupWorld for World_25, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.09:612][444]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.10:016][466]LogWorld: UWorld::CleanupWorld for World_24, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.10:017][466]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.10:691][504]LogWorld: UWorld::CleanupWorld for World_23, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.10:691][504]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.11:095][526]LogWorld: UWorld::CleanupWorld for World_22, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.11:095][526]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.11:567][552]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.11:567][552]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.13:164][642]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.13:164][642]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.14:269][703]LogWorld: UWorld::CleanupWorld for World_19, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.14:269][703]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.14:997][742]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.14:997][742]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.15:732][781]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.15:732][781]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.16:400][815]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.16:400][815]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.17:082][851]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.17:083][851]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.17:837][891]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.17:837][891]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.18:530][927]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.18:530][927]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.19:277][961]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.19:277][961]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.20:203][  9]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.20:203][  9]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.21:443][ 76]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.21:443][ 76]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.22:275][122]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.22:275][122]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.22:895][156]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.22:896][156]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.23:953][214]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.23:954][214]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.25:068][276]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.25:068][276]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.26:365][351]LogSlate: Window 'noBKG_GolemDeath_strip_Sprite_0' being destroyed
+[2020.04.29-20.40.26:401][351]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.40.26:401][351]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.40.56:789][129]LogAssetEditorSubsystem: Opening Asset editor for PaperFlipbook /Game/Animations/Beast/Death/BeastDeath.BeastDeath
+[2020.04.29-20.44.00:319][402]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Animations/Beast/Death/BeastDeath" FILE="../../../../../adale/Desktop/2DSouls/SideScroller/Content/Animations/Beast/Death/BeastDeath.uasset" SILENT=true
+[2020.04.29-20.44.00:339][402]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/BeastDeath77EEB12F4DA3DE8D1CF036801A2B1663.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Animations/Beast/Death/BeastDeath.uasset'
+[2020.04.29-20.44.00:373][402]AssetCheck: New page: Asset Save: BeastDeath
+[2020.04.29-20.44.00:373][402]LogContentValidation: Display: Validating PaperFlipbook /Game/Animations/Beast/Death/BeastDeath.BeastDeath
+[2020.04.29-20.44.02:945][547]LogSlate: Window 'BeastDeath' being destroyed
+[2020.04.29-20.44.02:954][547]LogSlate: Window 'BeastDeath' being destroyed
+[2020.04.29-20.44.02:972][547]LogWorld: UWorld::CleanupWorld for World_34, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.44.02:973][547]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.44.14:072][196]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprint/BP_BeastPawn.BP_BeastPawn
+[2020.04.29-20.44.25:450][797]BlueprintLog: New page: Compile BP_BeastPawn
+[2020.04.29-20.44.25:728][797]LogUObjectHash: Compacting FUObjectHashTables data took   4.22ms
+[2020.04.29-20.44.26:187][817]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprint/BP_BeastPawn" FILE="../../../../../adale/Desktop/2DSouls/SideScroller/Content/Blueprint/BP_BeastPawn.uasset" SILENT=true
+[2020.04.29-20.44.26:222][817]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/BP_BeastPawnDAA7A1034312DD6E5929EBABC7444340.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Blueprint/BP_BeastPawn.uasset'
+[2020.04.29-20.44.26:246][817]AssetCheck: New page: Asset Save: BP_BeastPawn
+[2020.04.29-20.44.26:246][817]LogContentValidation: Display: Validating Blueprint /Game/Blueprint/BP_BeastPawn.BP_BeastPawn
+[2020.04.29-20.44.27:383][873]LogTemp: Repeating last play command: Selected Viewport
+[2020.04.29-20.44.27:402][873]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.04.29-20.44.27:402][873]PIE: New page: PIE session: World (Apr. 29, 2020, 12:44:27 p.m.)
+[2020.04.29-20.44.27:402][873]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_World
+[2020.04.29-20.44.27:405][873]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002898s)
+[2020.04.29-20.44.27:407][873]LogAIModule: Creating AISystem for world World
+[2020.04.29-20.44.27:408][873]LogPlayLevel: PIE: World Init took: (0.001970s)
+[2020.04.29-20.44.27:408][873]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/World.World to /Game/Levels/UEDPIE_0_World.World (0.005470s)
+[2020.04.29-20.44.27:443][873]LogUObjectHash: Compacting FUObjectHashTables data took   2.65ms
+[2020.04.29-20.44.27:445][873]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.04.29-20.44.27:445][873]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.04.29-20.44.27:445][873]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.04.29-20.44.27:445][873]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.04.29-20.44.27:446][873]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.04.29-20.44.27:446][873]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.04.29-20.44.27:446][873]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.04.29-20.44.27:446][873]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.04.29-20.44.27:447][873]LogAudio: Display: Using built-in audio occlusion.
+[2020.04.29-20.44.27:447][873]LogAudioMixer: Display: Initializing audio mixer.
+[2020.04.29-20.44.27:464][873]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.04.29-20.44.27:465][873]LogAudioMixer: Display: Name: Speakers / Headphones (Realtek Audio)
+[2020.04.29-20.44.27:465][873]LogAudioMixer: Display: Is Default: Yes
+[2020.04.29-20.44.27:465][873]LogAudioMixer: Display: Sample Rate: 48000
+[2020.04.29-20.44.27:465][873]LogAudioMixer: Display: Channel Count Used: 2
+[2020.04.29-20.44.27:465][873]LogAudioMixer: Display: Device Channel Count: 2
+[2020.04.29-20.44.27:465][873]LogAudioMixer: Display: Channel Order:
+[2020.04.29-20.44.27:465][873]LogAudioMixer: Display: 0: FrontLeft
+[2020.04.29-20.44.27:465][873]LogAudioMixer: Display: 1: FrontRight
+[2020.04.29-20.44.27:557][873]LogAudioMixer: Display: Using Audio Device Speakers / Headphones (Realtek Audio)
+[2020.04.29-20.44.27:560][873]LogInit: FAudioDevice initialized.
+[2020.04.29-20.44.27:573][873]LogLoad: Game class is 'BP_SideScrollerGameModeBase_C'
+[2020.04.29-20.44.27:575][873]LogWorld: Bringing World /Game/Levels/UEDPIE_0_World.World up for play (max tick rate 60) at 2020.04.29-16.44.27
+[2020.04.29-20.44.27:576][873]LogWorld: Bringing up level for play took: 0.001335
+[2020.04.29-20.44.27:576][873]LogOnline: OSS: Creating online subsystem instance for: :Context_38
+[2020.04.29-20.44.27:580][873]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_World -0.224
+[2020.04.29-20.44.34:849][307]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.44.34:849][307]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.44.34:850][307]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.44.34:850][307]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_World
+[2020.04.29-20.44.34:850][307]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.44.34:851][307]LogWorld: UWorld::CleanupWorld for World, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.44.34:851][307]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.44.34:866][307]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2020.04.29-20.44.34:871][307]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.44.34:900][307]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.44.34:910][307]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.44.34:914][307]LogUObjectHash: Compacting FUObjectHashTables data took   2.51ms
+[2020.04.29-20.44.34:952][308]LogPlayLevel: Display: Destroying online subsystem :Context_38
+[2020.04.29-20.44.49:501][792]BlueprintLog: New page: Compile BP_BeastPawn
+[2020.04.29-20.44.49:721][792]LogUObjectHash: Compacting FUObjectHashTables data took   4.91ms
+[2020.04.29-20.44.50:880][858]BlueprintLog: New page: Compile BP_BeastPawn
+[2020.04.29-20.44.51:098][858]LogUObjectHash: Compacting FUObjectHashTables data took   3.28ms
+[2020.04.29-20.44.51:648][886]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprint/BP_BeastPawn" FILE="../../../../../adale/Desktop/2DSouls/SideScroller/Content/Blueprint/BP_BeastPawn.uasset" SILENT=true
+[2020.04.29-20.44.51:680][886]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/BP_BeastPawnAAE415B34B8221F5BCD0F1910B775037.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Blueprint/BP_BeastPawn.uasset'
+[2020.04.29-20.44.51:699][886]AssetCheck: New page: Asset Save: BP_BeastPawn
+[2020.04.29-20.44.51:700][886]LogContentValidation: Display: Validating Blueprint /Game/Blueprint/BP_BeastPawn.BP_BeastPawn
+[2020.04.29-20.44.53:029][952]LogTemp: Repeating last play command: Selected Viewport
+[2020.04.29-20.44.53:047][952]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.04.29-20.44.53:048][952]PIE: New page: PIE session: World (Apr. 29, 2020, 12:44:53 p.m.)
+[2020.04.29-20.44.53:048][952]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_World
+[2020.04.29-20.44.53:051][952]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002718s)
+[2020.04.29-20.44.53:052][952]LogAIModule: Creating AISystem for world World
+[2020.04.29-20.44.53:053][952]LogPlayLevel: PIE: World Init took: (0.001899s)
+[2020.04.29-20.44.53:053][952]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/World.World to /Game/Levels/UEDPIE_0_World.World (0.005272s)
+[2020.04.29-20.44.53:089][952]LogUObjectHash: Compacting FUObjectHashTables data took   3.23ms
+[2020.04.29-20.44.53:090][952]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.04.29-20.44.53:090][952]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.04.29-20.44.53:090][952]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.04.29-20.44.53:091][952]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.04.29-20.44.53:091][952]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.04.29-20.44.53:091][952]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.04.29-20.44.53:091][952]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.04.29-20.44.53:091][952]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.04.29-20.44.53:092][952]LogAudio: Display: Using built-in audio occlusion.
+[2020.04.29-20.44.53:092][952]LogAudioMixer: Display: Initializing audio mixer.
+[2020.04.29-20.44.53:107][952]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.04.29-20.44.53:108][952]LogAudioMixer: Display: Name: Speakers / Headphones (Realtek Audio)
+[2020.04.29-20.44.53:108][952]LogAudioMixer: Display: Is Default: Yes
+[2020.04.29-20.44.53:108][952]LogAudioMixer: Display: Sample Rate: 48000
+[2020.04.29-20.44.53:108][952]LogAudioMixer: Display: Channel Count Used: 2
+[2020.04.29-20.44.53:108][952]LogAudioMixer: Display: Device Channel Count: 2
+[2020.04.29-20.44.53:108][952]LogAudioMixer: Display: Channel Order:
+[2020.04.29-20.44.53:109][952]LogAudioMixer: Display: 0: FrontLeft
+[2020.04.29-20.44.53:109][952]LogAudioMixer: Display: 1: FrontRight
+[2020.04.29-20.44.53:200][952]LogAudioMixer: Display: Using Audio Device Speakers / Headphones (Realtek Audio)
+[2020.04.29-20.44.53:204][952]LogInit: FAudioDevice initialized.
+[2020.04.29-20.44.53:217][952]LogLoad: Game class is 'BP_SideScrollerGameModeBase_C'
+[2020.04.29-20.44.53:219][952]LogWorld: Bringing World /Game/Levels/UEDPIE_0_World.World up for play (max tick rate 60) at 2020.04.29-16.44.53
+[2020.04.29-20.44.53:220][952]LogWorld: Bringing up level for play took: 0.001433
+[2020.04.29-20.44.53:220][952]LogOnline: OSS: Creating online subsystem instance for: :Context_39
+[2020.04.29-20.44.53:224][952]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_World -0.58
+[2020.04.29-20.44.57:281][193]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.44.57:296][193]LogAudioMixer: Display: Flush succeeded in the source manager command queue (1).
+[2020.04.29-20.44.57:316][193]LogAudioMixer: Display: Flush succeeded the source manager command queue (2).
+[2020.04.29-20.44.57:316][193]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.44.57:317][193]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_World
+[2020.04.29-20.44.57:317][193]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.44.57:317][193]LogWorld: UWorld::CleanupWorld for World, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.44.57:317][193]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.44.57:336][193]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2020.04.29-20.44.57:340][193]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.44.57:371][193]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.04.29-20.44.57:379][193]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.29-20.44.57:383][193]LogUObjectHash: Compacting FUObjectHashTables data took   2.61ms
+[2020.04.29-20.44.57:424][194]LogPlayLevel: Display: Destroying online subsystem :Context_39
+[2020.04.29-20.45.22:695][381]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2020.04.29-20.45.22:697][381]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/World" FILE="../../../../../adale/Desktop/2DSouls/SideScroller/Saved/Autosaves/Game/Levels/World_Auto1.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2020.04.29-20.45.22:740][381]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/World_Auto1562149B6458E16175A0056B425BA779C.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/Autosaves/Game/Levels/World_Auto1.umap'
+[2020.04.29-20.45.22:743][381]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/World' took 0.080
+[2020.04.29-20.45.22:743][381]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.080
+[2020.04.29-20.52.14:948][717]LogUObjectHash: Compacting FUObjectHashTables data took   1.35ms
+[2020.04.29-20.52.14:972][717]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/World" FILE="../../../../../adale/Desktop/2DSouls/SideScroller/Content/Levels/World.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2020.04.29-20.52.15:012][717]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2020.04.29-20.52.15:045][717]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/World738EC2C64E81E32B6192D0A8B7419CC4.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Levels/World.umap'
+[2020.04.29-20.52.15:082][717]LogFileHelpers: Saving map 'World' took 0.110
+[2020.04.29-20.52.15:102][717]AssetCheck: New page: Asset Save: World
+[2020.04.29-20.52.15:102][717]LogContentValidation: Display: Validating World /Game/Levels/World.World
+[2020.04.29-20.52.18:290][891]BlueprintLog: New page: Compile BP_BeastPawn
+[2020.04.29-20.52.18:517][891]LogUObjectHash: Compacting FUObjectHashTables data took   3.78ms
+[2020.04.29-20.52.19:006][915]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprint/BP_BeastPawn" FILE="../../../../../adale/Desktop/2DSouls/SideScroller/Content/Blueprint/BP_BeastPawn.uasset" SILENT=true
+[2020.04.29-20.52.19:036][915]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/BP_BeastPawnE630716A4A9D32D301E32A8AEFF363E8.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Blueprint/BP_BeastPawn.uasset'
+[2020.04.29-20.52.19:050][915]AssetCheck: New page: Asset Save: BP_BeastPawn
+[2020.04.29-20.52.19:051][915]LogContentValidation: Display: Validating Blueprint /Game/Blueprint/BP_BeastPawn.BP_BeastPawn
+[2020.04.29-20.52.20:209][975]LogSlate: Window 'BP_BeastPawn' being destroyed
+[2020.04.29-20.52.20:218][975]LogSlate: Window 'BP_BeastPawn' being destroyed
+[2020.04.29-20.52.20:219][975]LogWorld: UWorld::CleanupWorld for World_35, bSessionEnded=true, bCleanupResources=true
+[2020.04.29-20.52.20:219][975]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.29-20.52.22:410][ 94]LogUObjectHash: Compacting FUObjectHashTables data took   3.73ms
+[2020.04.29-20.52.22:439][ 94]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/World" FILE="../../../../../adale/Desktop/2DSouls/SideScroller/Content/Levels/World.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2020.04.29-20.52.22:474][ 94]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2020.04.29-20.52.22:500][ 94]LogSavePackage: Moving '../../../../../adale/Desktop/2DSouls/SideScroller/Saved/World048AEF56449DAE15068245850617E30D.tmp' to '../../../../../adale/Desktop/2DSouls/SideScroller/Content/Levels/World.umap'
+[2020.04.29-20.52.22:534][ 94]LogFileHelpers: Saving map 'World' took 0.095
+[2020.04.29-20.52.22:548][ 94]AssetCheck: New page: Asset Save: World
+[2020.04.29-20.52.22:549][ 94]LogContentValidation: Display: Validating World /Game/Levels/World.World

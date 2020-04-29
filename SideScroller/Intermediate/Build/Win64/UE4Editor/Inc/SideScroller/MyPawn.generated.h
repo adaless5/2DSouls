@@ -17,8 +17,8 @@ struct FVector;
 #endif
 #define SIDESCROLLER_MyPawn_generated_h
 
-#define SideScroller_Source_SideScroller_MyPawn_h_22_SPARSE_DATA
-#define SideScroller_Source_SideScroller_MyPawn_h_22_RPC_WRAPPERS \
+#define SideScroller_Source_SideScroller_MyPawn_h_23_SPARSE_DATA
+#define SideScroller_Source_SideScroller_MyPawn_h_23_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnOverlapEnd) \
 	{ \
@@ -60,7 +60,7 @@ struct FVector;
 	}
 
 
-#define SideScroller_Source_SideScroller_MyPawn_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define SideScroller_Source_SideScroller_MyPawn_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnOverlapEnd) \
 	{ \
@@ -102,7 +102,7 @@ struct FVector;
 	}
 
 
-#define SideScroller_Source_SideScroller_MyPawn_h_22_INCLASS_NO_PURE_DECLS \
+#define SideScroller_Source_SideScroller_MyPawn_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyPawn(); \
 	friend struct Z_Construct_UClass_AMyPawn_Statics; \
@@ -111,7 +111,7 @@ public: \
 	DECLARE_SERIALIZER(AMyPawn)
 
 
-#define SideScroller_Source_SideScroller_MyPawn_h_22_INCLASS \
+#define SideScroller_Source_SideScroller_MyPawn_h_23_INCLASS \
 private: \
 	static void StaticRegisterNativesAMyPawn(); \
 	friend struct Z_Construct_UClass_AMyPawn_Statics; \
@@ -120,7 +120,7 @@ public: \
 	DECLARE_SERIALIZER(AMyPawn)
 
 
-#define SideScroller_Source_SideScroller_MyPawn_h_22_STANDARD_CONSTRUCTORS \
+#define SideScroller_Source_SideScroller_MyPawn_h_23_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMyPawn(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyPawn) \
@@ -133,7 +133,7 @@ private: \
 public:
 
 
-#define SideScroller_Source_SideScroller_MyPawn_h_22_ENHANCED_CONSTRUCTORS \
+#define SideScroller_Source_SideScroller_MyPawn_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMyPawn(AMyPawn&&); \
@@ -144,8 +144,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyPawn); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMyPawn)
 
 
-#define SideScroller_Source_SideScroller_MyPawn_h_22_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__m_Sprite() { return STRUCT_OFFSET(AMyPawn, m_Sprite); } \
+#define SideScroller_Source_SideScroller_MyPawn_h_23_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__m_ActiveFlipBook() { return STRUCT_OFFSET(AMyPawn, m_ActiveFlipBook); } \
 	FORCEINLINE static uint32 __PPO__m_Run() { return STRUCT_OFFSET(AMyPawn, m_Run); } \
 	FORCEINLINE static uint32 __PPO__m_Idle() { return STRUCT_OFFSET(AMyPawn, m_Idle); } \
@@ -160,31 +159,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyPawn); \
 	FORCEINLINE static uint32 __PPO__m_JumpValue() { return STRUCT_OFFSET(AMyPawn, m_JumpValue); } \
 	FORCEINLINE static uint32 __PPO__m_RollValue() { return STRUCT_OFFSET(AMyPawn, m_RollValue); } \
 	FORCEINLINE static uint32 __PPO__m_AttackStepValue() { return STRUCT_OFFSET(AMyPawn, m_AttackStepValue); } \
-	FORCEINLINE static uint32 __PPO__m_CurentPlayerState() { return STRUCT_OFFSET(AMyPawn, m_CurentPlayerState); } \
+	FORCEINLINE static uint32 __PPO__m_PlayerState() { return STRUCT_OFFSET(AMyPawn, m_PlayerState); } \
 	FORCEINLINE static uint32 __PPO__m_LastPlayerState() { return STRUCT_OFFSET(AMyPawn, m_LastPlayerState); }
 
 
-#define SideScroller_Source_SideScroller_MyPawn_h_19_PROLOG
-#define SideScroller_Source_SideScroller_MyPawn_h_22_GENERATED_BODY_LEGACY \
+#define SideScroller_Source_SideScroller_MyPawn_h_20_PROLOG
+#define SideScroller_Source_SideScroller_MyPawn_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SideScroller_Source_SideScroller_MyPawn_h_22_PRIVATE_PROPERTY_OFFSET \
-	SideScroller_Source_SideScroller_MyPawn_h_22_SPARSE_DATA \
-	SideScroller_Source_SideScroller_MyPawn_h_22_RPC_WRAPPERS \
-	SideScroller_Source_SideScroller_MyPawn_h_22_INCLASS \
-	SideScroller_Source_SideScroller_MyPawn_h_22_STANDARD_CONSTRUCTORS \
+	SideScroller_Source_SideScroller_MyPawn_h_23_PRIVATE_PROPERTY_OFFSET \
+	SideScroller_Source_SideScroller_MyPawn_h_23_SPARSE_DATA \
+	SideScroller_Source_SideScroller_MyPawn_h_23_RPC_WRAPPERS \
+	SideScroller_Source_SideScroller_MyPawn_h_23_INCLASS \
+	SideScroller_Source_SideScroller_MyPawn_h_23_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SideScroller_Source_SideScroller_MyPawn_h_22_GENERATED_BODY \
+#define SideScroller_Source_SideScroller_MyPawn_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SideScroller_Source_SideScroller_MyPawn_h_22_PRIVATE_PROPERTY_OFFSET \
-	SideScroller_Source_SideScroller_MyPawn_h_22_SPARSE_DATA \
-	SideScroller_Source_SideScroller_MyPawn_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	SideScroller_Source_SideScroller_MyPawn_h_22_INCLASS_NO_PURE_DECLS \
-	SideScroller_Source_SideScroller_MyPawn_h_22_ENHANCED_CONSTRUCTORS \
+	SideScroller_Source_SideScroller_MyPawn_h_23_PRIVATE_PROPERTY_OFFSET \
+	SideScroller_Source_SideScroller_MyPawn_h_23_SPARSE_DATA \
+	SideScroller_Source_SideScroller_MyPawn_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	SideScroller_Source_SideScroller_MyPawn_h_23_INCLASS_NO_PURE_DECLS \
+	SideScroller_Source_SideScroller_MyPawn_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -196,9 +195,14 @@ template<> SIDESCROLLER_API UClass* StaticClass<class AMyPawn>();
 
 
 #define FOREACH_ENUM_UPLAYERSTATE(op) \
-	op(Idle) \
-	op(Running) \
-	op(Attacking) \
-	op(Rolling) \
-	op(Shielding) 
+	op(UPlayerState::Idle) \
+	op(UPlayerState::Running) \
+	op(UPlayerState::Attacking) \
+	op(UPlayerState::Jumping) \
+	op(UPlayerState::Rolling) \
+	op(UPlayerState::Shielding) 
+
+enum class UPlayerState;
+template<> SIDESCROLLER_API UEnum* StaticEnum<UPlayerState>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

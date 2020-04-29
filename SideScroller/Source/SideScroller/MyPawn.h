@@ -7,11 +7,12 @@
 #include "MyPawn.generated.h"
 
 UENUM()
-enum UPlayerState
+enum class UPlayerState
 {
 	Idle UMETA(DisplayName = "Idle"),
 	Running UMETA(DisplayName = "Running"),
 	Attacking UMETA(DisplayName = "Attacking"),
+	Jumping UMETA(DisplayName = "Jumping"),
 	Rolling UMETA(DisplayName = "Rolling"),
 	Shielding UMETA(DisplayName = "Shielding")
 };
@@ -51,6 +52,8 @@ public:
 
 	virtual void InteractWithBonfire(); 
 
+	virtual UPlayerState GetPlayerState(); 
+
 	UFUNCTION()
 		virtual void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
@@ -63,9 +66,6 @@ public:
 	virtual void SetIsNearBonfire(bool isNear); 
 
 protected: 
-
-	UPROPERTY(EditAnywhere, Category = "Player")
-		class UPaperSpriteComponent* m_Sprite; 
 
 	UPROPERTY(EditAnywhere, Category = "Player")
 		class UPaperFlipbookComponent* m_ActiveFlipBook;
@@ -104,8 +104,8 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "PlayerMobility")
 		float m_AttackStepValue = 5.0f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerState")
-		TEnumAsByte<UPlayerState> m_CurentPlayerState; 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
+		TEnumAsByte<UPlayerState> m_PlayerState; 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerState")
 		TEnumAsByte<UPlayerState> m_LastPlayerState;
@@ -118,15 +118,10 @@ protected:
 	int32 AttackPlaybackPositionInFrames;
 	int32 AttackFlipbookLengthInFrames;
 
-	bool bIsAttacking = false;
-	bool bSwordDamageActive = true;
-	bool bIsOverlappingEnemy = false;
-	bool bIsMoving; 
-	bool bCanJump = false;
-	bool bIsJumping;
-	bool bIsRolling = false;
-	bool bCanRoll = true; 
-	bool bIsBlocking = false;
 	bool bIsNearBonfire = false;
 	bool bIsInMenu = false;
+	bool bSwordDamageActive = true;
+	bool bIsOverlappingEnemy = false;
+
+	class ABeastPawn* m_RecentBeast = nullptr; 
 };
