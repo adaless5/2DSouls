@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SideScroller.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{47CA6E17-91AD-4D83-A169-5F26CF6A289D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SideScroller.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SideScrollerEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{0CC2286A-5199-4E60-8CDB-27AFB96F8722}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SideScroller">
+      <UniqueIdentifier>{B69BD085-96B7-4435-A4A7-527CB44127DB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SideScroller\SideScroller.Build.cs">
+      <Filter>Source\SideScroller</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SideScroller\SideScroller.cpp">
+      <Filter>Source\SideScroller</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SideScroller\SideScroller.h">
+      <Filter>Source\SideScroller</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SideScroller\SideScrollerGameModeBase.cpp">
+      <Filter>Source\SideScroller</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SideScroller\SideScrollerGameModeBase.h">
+      <Filter>Source\SideScroller</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\SideScroller\MyCharacter.h">
+      <Filter>Source\SideScroller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SideScroller\MyPawn.h">
+      <Filter>Source\SideScroller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SideScroller\Bonfire.h">
+      <Filter>Source\SideScroller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SideScroller\BeastPawn.h">
+      <Filter>Source\SideScroller</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\SideScroller\MyCharacter.cpp">
+      <Filter>Source\SideScroller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SideScroller\MyPawn.cpp">
+      <Filter>Source\SideScroller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SideScroller\Bonfire.cpp">
+      <Filter>Source\SideScroller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SideScroller\BeastPawn.cpp">
+      <Filter>Source\SideScroller</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

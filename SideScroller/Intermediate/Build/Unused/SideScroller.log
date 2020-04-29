@@ -1,0 +1,18 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\adale\Desktop\2DSouls).
+  Parsing headers for SideScrollerEditor
+    Running UnrealHeaderTool "D:\adale\Desktop\2DSouls\SideScroller\SideScroller.uproject" "D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\SideScrollerEditor\Development\SideScrollerEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for SideScrollerEditor in 6.8894115 seconds
+  Building SideScrollerEditor...
+  Using Visual Studio 2019 14.24.28316 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314) and Windows 10.0.18362.0 SDK (D:\Windows Kits\10).
+  Building 7 actions with 8 processes...
+    [1/7] SideScroller.init.gen.cpp
+    [2/7] MyPawn.gen.cpp
+    [3/7] Bonfire.cpp
+    [4/7] MyPawn.cpp
+    [5/7] UE4Editor-SideScroller.lib
+       Creating library D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller.lib and object D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller.exp
+    [6/7] UE4Editor-SideScroller.dll
+       Creating library D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller.suppressed.lib and object D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller.suppressed.exp
+    [7/7] SideScrollerEditor.target
+  Total time in Parallel executor: 8.87 seconds
+  Total execution time: 16.58 seconds
