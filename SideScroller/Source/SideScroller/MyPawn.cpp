@@ -4,6 +4,7 @@
 #include "MyPawn.h"
 #include "Camera/CameraComponent.h"
 #include "Components/BoxComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -11,6 +12,9 @@
 #include "PaperFlipbook.h"
 #include "PaperFlipbookComponent.h"
 #include "BeastPawn.h"
+//#include "EnemyCharacter.h"
+#include "EnemyPawn.h"
+#include "TimerManager.h"
 
 
 // Sets default values
@@ -49,6 +53,7 @@ AMyPawn::AMyPawn()
 	m_Roll = CreateDefaultSubobject<UPaperFlipbook>(TEXT("Roll")); 
 	m_Shield = CreateDefaultSubobject<UPaperFlipbook>(TEXT("Shield")); 
 	m_Jump = CreateDefaultSubobject<UPaperFlipbook>(TEXT("Jump")); 
+	m_Dead = CreateDefaultSubobject<UPaperFlipbook>(TEXT("Dead")); 
 
 	m_ActiveFlipBook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("ActiveFlipbook")); 
 	m_ActiveFlipBook->SetupAttachment(RootComponent); 
@@ -76,11 +81,15 @@ void AMyPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (!m_CurrentVelocity.IsZero() && m_PlayerState != UPlayerState::Shielding)
+	if (m_PlayerState != UPlayerState::Dead)
 	{
-		FVector NewLocation = GetActorLocation() + (m_CurrentVelocity * DeltaTime);
-		SetActorLocation(NewLocation);
+		if (!m_CurrentVelocity.IsZero() && m_PlayerState != UPlayerState::Shielding)
+		{
+			FVector NewLocation = GetActorLocation() + (m_CurrentVelocity * DeltaTime);
+			SetActorLocation(NewLocation);
+		}
 	}
+	
 
 	m_AttackHitBox->SetWorldLocation(GetActorLocation() + FVector(0.08 * m_LastVelocity.X, 0.0f, 6.0f));
 
@@ -94,35 +103,38 @@ void AMyPawn::Tick(float DeltaTime)
 		m_ActiveFlipBook->SetFlipbook(m_Run);
 		break;
 	case UPlayerState::Attacking:
-		m_ActiveFlipBook->SetFlipbook(m_Attack);
-		AttackPlaybackPositionInFrames = m_ActiveFlipBook->GetPlaybackPositionInFrames();
-		AttackFlipbookLengthInFrames = m_ActiveFlipBook->GetFlipbookLengthInFrames();
-
-		if (AttackPlaybackPositionInFrames == 5 || AttackPlaybackPositionInFrames == 11 || AttackPlaybackPositionInFrames == 18)
+		if (m_PlayerState != UPlayerState::Dead)
 		{
-			m_Box->AddImpulse(FVector(m_LastVelocity.X * m_AttackStepValue, 0.0f, 0.0f));
-		}
+			m_ActiveFlipBook->SetFlipbook(m_Attack);
+			AttackPlaybackPositionInFrames = m_ActiveFlipBook->GetPlaybackPositionInFrames();
+			AttackFlipbookLengthInFrames = m_ActiveFlipBook->GetFlipbookLengthInFrames();
 
-		if (bIsOverlappingEnemy)
-		{
 			if (AttackPlaybackPositionInFrames == 5 || AttackPlaybackPositionInFrames == 11 || AttackPlaybackPositionInFrames == 18)
 			{
-				if (bSwordDamageActive)
-				{
-					if (m_RecentBeast != nullptr)
-					{
-						bSwordDamageActive = false;
-						GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Sword hit enemy"));
-						
-						m_RecentBeast->ApplyDamage(1); 
-						m_RecentBeast->GetBoxComponent()->AddImpulse(FVector(m_LastVelocity.X * 20.0f, 0.0f, 0.0f)); 
-					}
-					
-				}
+				m_Box->AddImpulse(FVector(m_LastVelocity.X * m_AttackStepValue, 0.0f, 0.0f));
 			}
-			else
+
+			if (bIsOverlappingEnemy)
 			{
-				bSwordDamageActive = true;
+				if (AttackPlaybackPositionInFrames == 5 || AttackPlaybackPositionInFrames == 11 || AttackPlaybackPositionInFrames == 18)
+				{
+					if (bSwordDamageActive)
+					{
+						if (m_RecentEnemy != nullptr)
+						{
+							bSwordDamageActive = false;
+							GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Sword hit enemy"));
+
+							m_RecentEnemy->ApplyDamage(1);
+							m_RecentEnemy->GetBoxComponent()->AddImpulse(FVector(m_LastVelocity.X * 20.0f, 0.0f, 0.0f));
+						}
+
+					}
+				}
+				else
+				{
+					bSwordDamageActive = true;
+				}
 			}
 		}
 		break;
@@ -144,9 +156,12 @@ void AMyPawn::Tick(float DeltaTime)
 			m_ActiveFlipBook->PlayFromStart();
 		}
 		break;
+	case UPlayerState::Dead:
+		m_ActiveFlipBook->SetFlipbook(m_Dead); 
+		m_ActiveFlipBook->SetLooping(false); 
 	}
 
-	if (m_CurrentVelocity.IsZero() && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Jumping)
+	if (m_CurrentVelocity.IsZero() && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Dead)
 	{
 		m_PlayerState = UPlayerState::Idle;
 	}
@@ -176,7 +191,7 @@ void AMyPawn::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitive
 {
 	if (HitComp->ComponentHasTag(TEXT("PlayerHitBox")))
 	{
-		if (OtherComp->ComponentHasTag("Ground") && m_PlayerState == UPlayerState::Jumping)
+		if (OtherComp->ComponentHasTag("Ground") && m_PlayerState == UPlayerState::Jumping && m_PlayerState != UPlayerState::Dead)
 		{
 			m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f); 
 			//bCanJump = true;
@@ -191,8 +206,8 @@ void AMyPawn::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherA
 	{
 		if (OtherComp->ComponentHasTag(TEXT("Enemy")))
 		{
-			m_RecentBeast = Cast<ABeastPawn>(OtherActor);
-
+			//m_RecentBeast = Cast<ABeastPawn>(OtherActor);
+			m_RecentEnemy = Cast<AEnemyPawn>(OtherActor); 
 			bIsOverlappingEnemy = true;
 			GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, TEXT("Sword in contact with enemy."));
 		}
@@ -205,8 +220,8 @@ void AMyPawn::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AAct
 	{
 		if (OtherComp->ComponentHasTag(TEXT("Enemy")))
 		{
-			m_RecentBeast = nullptr; 
-
+			//m_RecentBeast = nullptr; 
+			m_RecentEnemy = nullptr; 
 			bIsOverlappingEnemy = false;
 			GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, TEXT("Sword out of contact with enemy."));
 		}
@@ -218,9 +233,41 @@ void AMyPawn::SetIsNearBonfire(bool isNear)
 	bIsNearBonfire = isNear; 
 }
 
+void AMyPawn::ApplyDamage(int damage)
+{
+	if (m_PlayerState != UPlayerState::Dead)
+	{
+		if (bCanBeDamaged == true)
+		{
+			UWorld* World = GetWorld();
+			if (World)
+			{
+				World->GetTimerManager().ClearTimer(m_InvincibilityTimerHandle);
+				World->GetTimerManager().SetTimer(m_InvincibilityTimerHandle, this, &AMyPawn::SetCanBeDamaged, m_InvincibiltyTimerRate, false, m_InvincibiltyTimerRate);
+			}
+			m_TotalHealth -= damage;
+			if (m_TotalHealth < 1)
+			{
+				//m_TotalHealth = 0;
+				m_PlayerState = UPlayerState::Dead;
+				return;
+			}
+			bCanBeDamaged = false;
+
+			FString IntAsString = FString::FromInt(m_TotalHealth);
+			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TEXT("Player Health: " + IntAsString));
+		}
+	}
+}
+
+void AMyPawn::SetCanBeDamaged()
+{
+	bCanBeDamaged = true; 
+}
+
 void AMyPawn::Move_X_Axis(float value)
 {
-	if (m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Jumping)
+	if (m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Dead)
 	{
 		m_CurrentVelocity.X = FMath::Clamp(value, -1.0f, 1.0f) * 200.0f;
 
@@ -243,7 +290,7 @@ void AMyPawn::Move_X_Axis(float value)
 
 void AMyPawn::Move_Y_Axis(float value)
 {
-	if (m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Jumping)
+	if (m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Dead)
 	{
 		m_CurrentVelocity.Y = FMath::Clamp(value, -1.0f, 1.0f) * 200.0f;
 
@@ -262,7 +309,7 @@ void AMyPawn::Move_Y_Axis(float value)
 
 void AMyPawn::Attack()
 {
-	if (m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Shielding)
+	if (m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Dead)
 	{
 		m_PlayerState = UPlayerState::Attacking;
 		m_ActiveFlipBook->SetFlipbook(m_Attack);
@@ -282,7 +329,7 @@ void AMyPawn::Attack()
 
 void AMyPawn::StopAttacking()
 {
-	if (m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Shielding)
+	if (m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Dead)
 	{
 		m_PlayerState = UPlayerState::Idle; 
 		//m_ActiveFlipBook->SetFlipbook(m_Idle);
@@ -300,7 +347,7 @@ void AMyPawn::StopAttacking()
 
 void AMyPawn::Jump()
 {
-	if (m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Rolling)
+	if (m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Dead)
 	{
 		m_PlayerState = UPlayerState::Jumping;
 		m_ActiveFlipBook->SetFlipbook(m_Jump);
@@ -312,7 +359,7 @@ void AMyPawn::Jump()
 
 void AMyPawn::Roll()
 {
-	if (m_PlayerState != UPlayerState::Rolling)
+	if (m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Dead)
 	{
 		m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
 		m_PlayerState = UPlayerState::Rolling;

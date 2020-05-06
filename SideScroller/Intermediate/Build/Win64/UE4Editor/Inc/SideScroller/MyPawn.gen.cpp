@@ -45,7 +45,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		return UPlayerState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_UPlayerState(UPlayerState_StaticEnum, TEXT("/Script/SideScroller"), TEXT("UPlayerState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SideScroller_UPlayerState_Hash() { return 669040117U; }
+	uint32 Get_Z_Construct_UEnum_SideScroller_UPlayerState_Hash() { return 1711259371U; }
 	UEnum* Z_Construct_UEnum_SideScroller_UPlayerState()
 	{
 #if WITH_HOT_RELOAD
@@ -63,11 +63,14 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 				{ "UPlayerState::Jumping", (int64)UPlayerState::Jumping },
 				{ "UPlayerState::Rolling", (int64)UPlayerState::Rolling },
 				{ "UPlayerState::Shielding", (int64)UPlayerState::Shielding },
+				{ "UPlayerState::Dead", (int64)UPlayerState::Dead },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Attacking.DisplayName", "Attacking" },
 				{ "Attacking.Name", "UPlayerState::Attacking" },
+				{ "Dead.DisplayName", "Dead" },
+				{ "Dead.Name", "UPlayerState::Dead" },
 				{ "Idle.DisplayName", "Idle" },
 				{ "Idle.Name", "UPlayerState::Idle" },
 				{ "Jumping.DisplayName", "Jumping" },
@@ -332,15 +335,23 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_InvincibiltyTimerRate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_m_InvincibiltyTimerRate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_TotalHealth_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_TotalHealth;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_LastPlayerState_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_m_LastPlayerState;
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_LastPlayerState_Underlying;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_m_LastPlayerState_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_PlayerState_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_m_PlayerState;
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_PlayerState_Underlying;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_m_PlayerState_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_AttackStepValue_MetaData[];
 #endif
@@ -369,6 +380,10 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_Box_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_m_Box;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_Dead_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_m_Dead;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_Jump_MetaData[];
 #endif
@@ -418,13 +433,27 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPawn_Statics::NewProp_m_InvincibiltyTimerRate_MetaData[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "MyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_InvincibiltyTimerRate = { "m_InvincibiltyTimerRate", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPawn, m_InvincibiltyTimerRate), METADATA_PARAMS(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_InvincibiltyTimerRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_InvincibiltyTimerRate_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPawn_Statics::NewProp_m_TotalHealth_MetaData[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "MyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_TotalHealth = { "m_TotalHealth", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPawn, m_TotalHealth), METADATA_PARAMS(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_TotalHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_TotalHealth_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPawn_Statics::NewProp_m_LastPlayerState_MetaData[] = {
 		{ "Category", "PlayerState" },
 		{ "ModuleRelativePath", "MyPawn.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_LastPlayerState = { "m_LastPlayerState", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPawn, m_LastPlayerState), Z_Construct_UEnum_SideScroller_UPlayerState, METADATA_PARAMS(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_LastPlayerState_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_LastPlayerState_MetaData)) };
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_LastPlayerState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_LastPlayerState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPawn_Statics::NewProp_m_PlayerState_MetaData[] = {
 		{ "Category", "Player" },
@@ -432,7 +461,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_PlayerState = { "m_PlayerState", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPawn, m_PlayerState), Z_Construct_UEnum_SideScroller_UPlayerState, METADATA_PARAMS(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_PlayerState_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_PlayerState_MetaData)) };
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_PlayerState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_PlayerState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPawn_Statics::NewProp_m_AttackStepValue_MetaData[] = {
 		{ "Category", "PlayerMobility" },
@@ -487,6 +516,13 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Box = { "m_Box", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPawn, m_Box), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Box_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Box_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Dead_MetaData[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "MyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Dead = { "m_Dead", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPawn, m_Dead), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Dead_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Dead_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Jump_MetaData[] = {
 		{ "Category", "Player" },
 		{ "ModuleRelativePath", "MyPawn.h" },
@@ -537,6 +573,8 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPawn_Statics::NewProp_m_ActiveFlipBook = { "m_ActiveFlipBook", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPawn, m_ActiveFlipBook), Z_Construct_UClass_UPaperFlipbookComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_ActiveFlipBook_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPawn_Statics::NewProp_m_ActiveFlipBook_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyPawn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_InvincibiltyTimerRate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_TotalHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_LastPlayerState,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_LastPlayerState_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_PlayerState,
@@ -548,6 +586,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_SpringArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_AttackHitBox,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Box,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Dead,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Jump,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Shield,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPawn_Statics::NewProp_m_Roll,
@@ -583,7 +622,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPawn, 945117411);
+	IMPLEMENT_CLASS(AMyPawn, 642872708);
 	template<> SIDESCROLLER_API UClass* StaticClass<AMyPawn>()
 	{
 		return AMyPawn::StaticClass();

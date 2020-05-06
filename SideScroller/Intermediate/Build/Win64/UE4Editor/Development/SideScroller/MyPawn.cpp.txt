@@ -7,6 +7,8 @@ D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/B
 D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
 D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
 D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
+D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
+D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
 D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
 D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
 D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
@@ -19,3 +21,5 @@ D:\Program Files (x86)\UE_4.24\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\
 D:\Program Files (x86)\UE_4.24\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperFlipbookComponent.generated.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\BeastPawn.h
 D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller\BeastPawn.generated.h
+D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\EnemyPawn.h
+D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller\EnemyPawn.generated.h

@@ -7,14 +7,15 @@
 #include "MyPawn.generated.h"
 
 UENUM()
-enum class UPlayerState
+enum class UPlayerState : uint8
 {
 	Idle UMETA(DisplayName = "Idle"),
 	Running UMETA(DisplayName = "Running"),
 	Attacking UMETA(DisplayName = "Attacking"),
 	Jumping UMETA(DisplayName = "Jumping"),
 	Rolling UMETA(DisplayName = "Rolling"),
-	Shielding UMETA(DisplayName = "Shielding")
+	Shielding UMETA(DisplayName = "Shielding"),
+	Dead UMETA(DisplayName = "Dead"),
 };
 
 UCLASS()
@@ -65,6 +66,9 @@ public:
 
 	virtual void SetIsNearBonfire(bool isNear); 
 
+	void ApplyDamage(int damage); 
+	void SetCanBeDamaged(); 
+
 protected: 
 
 	UPROPERTY(EditAnywhere, Category = "Player")
@@ -73,15 +77,17 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Player")
 		class UPaperFlipbook* m_Run; 
 	UPROPERTY(EditAnywhere, Category = "Player")
-		class UPaperFlipbook* m_Idle;
+		UPaperFlipbook* m_Idle;
 	UPROPERTY(EditAnywhere, Category = "Player")
-		class UPaperFlipbook* m_Attack;
+		UPaperFlipbook* m_Attack;
 	UPROPERTY(EditAnywhere, Category = "Player")
-		class UPaperFlipbook* m_Roll;
+		UPaperFlipbook* m_Roll;
 	UPROPERTY(EditAnywhere, Category = "Player")
-		class UPaperFlipbook* m_Shield;
+		UPaperFlipbook* m_Shield;
 	UPROPERTY(EditAnywhere, Category = "Player")
-		class UPaperFlipbook* m_Jump; 
+		UPaperFlipbook* m_Jump; 
+	UPROPERTY(EditAnywhere, Category = "Player")
+		UPaperFlipbook* m_Dead; 
 
 	UPROPERTY(EditAnywhere, Category = "Player")
 		class UBoxComponent* m_Box; 
@@ -110,6 +116,14 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerState")
 		TEnumAsByte<UPlayerState> m_LastPlayerState;
 
+	UPROPERTY(EditAnywhere, Category = "Player")
+		int m_TotalHealth = 3; 
+
+	FTimerHandle m_InvincibilityTimerHandle; 
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		float m_InvincibiltyTimerRate = 3.0f; 
+
 	FVector m_CurrentVelocity; 
 	FVector m_LastVelocity; 
 
@@ -122,6 +136,9 @@ protected:
 	bool bIsInMenu = false;
 	bool bSwordDamageActive = true;
 	bool bIsOverlappingEnemy = false;
+	bool bCanBeDamaged = true; 
 
 	class ABeastPawn* m_RecentBeast = nullptr; 
+	//class AEnemyCharacter* m_RecentEnemy = nullptr; 
+	class AEnemyPawn* m_RecentEnemy = nullptr; 
 };

@@ -1,14 +1,3 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\adale\Desktop\2DSouls).
-  Failed to delete file 'D:\adale\Desktop\2DSouls\SideScroller\Binaries\Win64\UE4Editor-SideScroller.pdb'
-      Exception: The process cannot access the file 'D:\adale\Desktop\2DSouls\SideScroller\Binaries\Win64\UE4Editor-SideScroller.pdb' because it is being used by another process.
-  Attempting to retry...
-  Building SideScrollerEditor...
-  Using Visual Studio 2019 14.24.28316 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314) and Windows 10.0.18362.0 SDK (D:\Windows Kits\10).
-  Building 3 actions with 8 processes...
-    [1/3] UE4Editor-SideScroller.lib
-       Creating library D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller.lib and object D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller.exp
-    [2/3] UE4Editor-SideScroller.dll
-       Creating library D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller.suppressed.lib and object D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\UE4Editor-SideScroller.suppressed.exp
-    [3/3] SideScrollerEditor.target
-  Total time in Parallel executor: 1.00 seconds
-  Total execution time: 2.78 seconds
+  Target is up to date
+  Total execution time: 0.81 seconds

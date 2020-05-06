@@ -31,6 +31,8 @@ ABeastPawn::ABeastPawn()
 
 	m_IdleFlipbook = CreateDefaultSubobject<UPaperFlipbook>(TEXT("IdleAnimation")); 
 	m_DeathFlipbook = CreateDefaultSubobject<UPaperFlipbook>(TEXT("DeathAnimation")); 
+	m_RunningFlipbook = CreateDefaultSubobject<UPaperFlipbook>(TEXT("RunningAnimation")); 
+	m_AttackingFlipbook = CreateDefaultSubobject<UPaperFlipbook>(TEXT("AttackingAnimation")); 
 
 	m_ActiveFlipbook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("ActiveFlipbook")); 
 	m_ActiveFlipbook->SetCollisionEnabled(ECollisionEnabled::NoCollision); 
@@ -44,6 +46,8 @@ void ABeastPawn::BeginPlay()
 	Super::BeginPlay();
 	//m_CurrentState = UEnemyState::Idle; 
 	m_ActiveFlipbook->SetFlipbook(m_IdleFlipbook); 
+
+	 
 }
 
 // Called every frame
@@ -54,9 +58,9 @@ void ABeastPawn::Tick(float DeltaTime)
 	if (m_TotalHealth <= 0)
 	{
 		//m_ActiveFlipbook->SetFlipbook(m_DeathFlipbook); 
-		if (m_CurrentState != UEnemyState::Dead)
+		if (m_CurrentState != UBeastState::Dead)
 		{
-			m_CurrentState = UEnemyState::Dead; 
+			m_CurrentState = UBeastState::Dead;
 			m_ActiveFlipbook->SetFlipbook(m_DeathFlipbook); 
 			m_ActiveFlipbook->PlayFromStart(); 
 			m_ActiveFlipbook->SetLooping(false); 

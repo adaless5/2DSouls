@@ -274,11 +274,17 @@
     <None Include="..\..\Source\SideScroller\SideScroller.Build.cs" />
     <ClCompile Include="..\..\Source\SideScroller\BeastPawn.cpp" />
     <ClCompile Include="..\..\Source\SideScroller\Bonfire.cpp" />
+    <ClCompile Include="..\..\Source\SideScroller\EnemyCharacter.cpp" />
+    <ClCompile Include="..\..\Source\SideScroller\EnemyController.cpp" />
+    <ClCompile Include="..\..\Source\SideScroller\EnemyPawn.cpp" />
     <ClCompile Include="..\..\Source\SideScroller\MyCharacter.cpp" />
     <ClCompile Include="..\..\Source\SideScroller\MyPawn.cpp" />
     <ClCompile Include="..\..\Source\SideScroller\SideScroller.cpp" />
     <ClInclude Include="..\..\Source\SideScroller\BeastPawn.h" />
     <ClInclude Include="..\..\Source\SideScroller\Bonfire.h" />
+    <ClInclude Include="..\..\Source\SideScroller\EnemyCharacter.h" />
+    <ClInclude Include="..\..\Source\SideScroller\EnemyController.h" />
+    <ClInclude Include="..\..\Source\SideScroller\EnemyPawn.h" />
     <ClInclude Include="..\..\Source\SideScroller\MyCharacter.h" />
     <ClInclude Include="..\..\Source\SideScroller\MyPawn.h" />
     <ClInclude Include="..\..\Source\SideScroller\SideScroller.h" />

@@ -61,9 +61,11 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABeastPawn); \
 #define SideScroller_Source_SideScroller_BeastPawn_h_22_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__m_BodyHitBox() { return STRUCT_OFFSET(ABeastPawn, m_BodyHitBox); } \
 	FORCEINLINE static uint32 __PPO__m_TestSprite() { return STRUCT_OFFSET(ABeastPawn, m_TestSprite); } \
-	FORCEINLINE static uint32 __PPO__m_ActiveFlipbook() { return STRUCT_OFFSET(ABeastPawn, m_ActiveFlipbook); } \
 	FORCEINLINE static uint32 __PPO__m_IdleFlipbook() { return STRUCT_OFFSET(ABeastPawn, m_IdleFlipbook); } \
 	FORCEINLINE static uint32 __PPO__m_DeathFlipbook() { return STRUCT_OFFSET(ABeastPawn, m_DeathFlipbook); } \
+	FORCEINLINE static uint32 __PPO__m_RunningFlipbook() { return STRUCT_OFFSET(ABeastPawn, m_RunningFlipbook); } \
+	FORCEINLINE static uint32 __PPO__m_AttackingFlipbook() { return STRUCT_OFFSET(ABeastPawn, m_AttackingFlipbook); } \
+	FORCEINLINE static uint32 __PPO__m_ActiveFlipbook() { return STRUCT_OFFSET(ABeastPawn, m_ActiveFlipbook); } \
 	FORCEINLINE static uint32 __PPO__m_TotalHealth() { return STRUCT_OFFSET(ABeastPawn, m_TotalHealth); } \
 	FORCEINLINE static uint32 __PPO__m_CurrentState() { return STRUCT_OFFSET(ABeastPawn, m_CurrentState); }
 
@@ -99,14 +101,14 @@ template<> SIDESCROLLER_API UClass* StaticClass<class ABeastPawn>();
 #define CURRENT_FILE_ID SideScroller_Source_SideScroller_BeastPawn_h
 
 
-#define FOREACH_ENUM_UENEMYSTATE(op) \
-	op(UEnemyState::Idle) \
-	op(UEnemyState::Running) \
-	op(UEnemyState::Attacking) \
-	op(UEnemyState::Jumping) \
-	op(UEnemyState::Dead) 
+#define FOREACH_ENUM_UBEASTSTATE(op) \
+	op(UBeastState::Idle) \
+	op(UBeastState::Running) \
+	op(UBeastState::Attacking) \
+	op(UBeastState::Jumping) \
+	op(UBeastState::Dead) 
 
-enum class UEnemyState;
-template<> SIDESCROLLER_API UEnum* StaticEnum<UEnemyState>();
+enum class UBeastState : uint8;
+template<> SIDESCROLLER_API UEnum* StaticEnum<UBeastState>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

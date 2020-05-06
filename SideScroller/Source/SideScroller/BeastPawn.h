@@ -7,7 +7,7 @@
 #include "BeastPawn.generated.h"
 
 UENUM()
-enum class UEnemyState
+enum class UBeastState : uint8
 {
 	Idle UMETA(DisplayName = "Idle"),
 	Running UMETA(DisplayName = "Running"),
@@ -46,13 +46,19 @@ protected:
 		class UPaperSpriteComponent* m_TestSprite; 
 
 	UPROPERTY(EditAnywhere, Category = "Beast")
-		class UPaperFlipbookComponent* m_ActiveFlipbook; 
-
-	UPROPERTY(EditAnywhere, Category = "Beast")
-		class UPaperFlipbook* m_IdleFlipbook; 
+		class UPaperFlipbook* m_IdleFlipbook;
 
 	UPROPERTY(EditAnywhere, Category = "Beast")
 		class UPaperFlipbook* m_DeathFlipbook;
+
+	UPROPERTY(EditAnywhere, Category = "Beast")
+		class UPaperFlipbook* m_RunningFlipbook;
+
+	UPROPERTY(EditAnywhere, Category = "Beast")
+		class UPaperFlipbook* m_AttackingFlipbook;
+
+	UPROPERTY(EditAnywhere, Category = "Beast")
+		class UPaperFlipbookComponent* m_ActiveFlipbook; 
 
 	UPROPERTY(EditAnywhere, Category = "Beast")
 		int32 m_TotalHealth = 3;
@@ -61,7 +67,7 @@ protected:
 	int32 DeathFlipbookLengthInFrames;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Beast")
-		TEnumAsByte<UEnemyState> m_CurrentState;
+		TEnumAsByte<UBeastState> m_CurrentState;
 
 public:
 	UBoxComponent* GetBoxComponent(); 
