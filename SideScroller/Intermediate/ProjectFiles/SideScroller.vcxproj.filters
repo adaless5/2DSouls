@@ -64,6 +64,12 @@
     <ClInclude Include="..\..\Source\SideScroller\EnemyPawn.h">
       <Filter>Source\SideScroller</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\SideScroller\MainPlayerController.h">
+      <Filter>Source\SideScroller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SideScroller\PlayerHUD.h">
+      <Filter>Source\SideScroller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\SideScroller\MyCharacter.cpp">
@@ -85,6 +91,12 @@
       <Filter>Source\SideScroller</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\SideScroller\EnemyPawn.cpp">
+      <Filter>Source\SideScroller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SideScroller\MainPlayerController.cpp">
+      <Filter>Source\SideScroller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SideScroller\PlayerHUD.cpp">
       <Filter>Source\SideScroller</Filter>
     </ClCompile>
   </ItemGroup>

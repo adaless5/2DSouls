@@ -228,8 +228,8 @@
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I Runtime\AudioMixerCore\Public
-/I D:\adale\Desktop\2DSouls\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller
-/I D:\adale\Desktop\2DSouls\Source
+/I D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller
+/I D:\adale\Desktop\2DSouls\SideScroller\Source
 /I ..\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D
 /I ..\Plugins\2D\Paper2D\Source
 /I ..\Plugins\2D\Paper2D\Source\Paper2D\Classes
@@ -263,12 +263,12 @@
 /I "D:\Windows Kits\10\include\10.0.18362.0\shared"
 /I "D:\Windows Kits\10\include\10.0.18362.0\um"
 /I "D:\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"D:\adale\Desktop\2DSouls\Intermediate\Build\Win64\SideScrollerEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"D:\adale\Desktop\2DSouls\Intermediate\Build\Win64\SideScrollerEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\adale\Desktop\2DSouls\Intermediate\Build\Win64\SideScrollerEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"D:\adale\Desktop\2DSouls\Source\SideScroller\MyPawn.cpp"
-/FI"D:\adale\Desktop\2DSouls\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\Definitions.SideScroller.h"
-/Fo"D:\adale\Desktop\2DSouls\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\MyPawn.cpp.obj"
+/FI"D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\SideScrollerEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\SideScrollerEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\SideScrollerEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\MyPawn.cpp"
+/FI"D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\Definitions.SideScroller.h"
+/Fo"D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\MyPawn.cpp.obj"
 /TP
 /GR-
 /W4

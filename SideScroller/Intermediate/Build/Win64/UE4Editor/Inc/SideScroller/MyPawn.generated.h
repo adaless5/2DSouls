@@ -20,6 +20,57 @@ struct FVector;
 #define SideScroller_Source_SideScroller_MyPawn_h_24_SPARSE_DATA
 #define SideScroller_Source_SideScroller_MyPawn_h_24_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSetIsInMenu) \
+	{ \
+		P_GET_UBOOL(Z_Param_IsInMenu); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetIsInMenu(Z_Param_IsInMenu); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetStaminaPercentage) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetStaminaPercentage(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetHealthPercentage) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetHealthPercentage(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetMaxHealth) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetMaxHealth(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execIncreaseMaxStamina) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_StatIncrease); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->IncreaseMaxStamina(Z_Param_StatIncrease); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execIncreaseMaxHealth) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_StatIncrease); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->IncreaseMaxHealth(Z_Param_StatIncrease); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnOverlapEnd) \
 	{ \
 		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp); \
@@ -61,6 +112,57 @@ struct FVector;
 
 
 #define SideScroller_Source_SideScroller_MyPawn_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSetIsInMenu) \
+	{ \
+		P_GET_UBOOL(Z_Param_IsInMenu); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetIsInMenu(Z_Param_IsInMenu); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetStaminaPercentage) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetStaminaPercentage(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetHealthPercentage) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetHealthPercentage(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetMaxHealth) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetMaxHealth(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execIncreaseMaxStamina) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_StatIncrease); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->IncreaseMaxStamina(Z_Param_StatIncrease); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execIncreaseMaxHealth) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_StatIncrease); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->IncreaseMaxHealth(Z_Param_StatIncrease); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execOnOverlapEnd) \
 	{ \
@@ -162,8 +264,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyPawn); \
 	FORCEINLINE static uint32 __PPO__m_AttackStepValue() { return STRUCT_OFFSET(AMyPawn, m_AttackStepValue); } \
 	FORCEINLINE static uint32 __PPO__m_PlayerState() { return STRUCT_OFFSET(AMyPawn, m_PlayerState); } \
 	FORCEINLINE static uint32 __PPO__m_LastPlayerState() { return STRUCT_OFFSET(AMyPawn, m_LastPlayerState); } \
-	FORCEINLINE static uint32 __PPO__m_TotalHealth() { return STRUCT_OFFSET(AMyPawn, m_TotalHealth); } \
-	FORCEINLINE static uint32 __PPO__m_InvincibiltyTimerRate() { return STRUCT_OFFSET(AMyPawn, m_InvincibiltyTimerRate); }
+	FORCEINLINE static uint32 __PPO__m_CurentHealth() { return STRUCT_OFFSET(AMyPawn, m_CurentHealth); } \
+	FORCEINLINE static uint32 __PPO__m_MaxHealth() { return STRUCT_OFFSET(AMyPawn, m_MaxHealth); } \
+	FORCEINLINE static uint32 __PPO__m_CurrentStamina() { return STRUCT_OFFSET(AMyPawn, m_CurrentStamina); } \
+	FORCEINLINE static uint32 __PPO__m_MaxStamina() { return STRUCT_OFFSET(AMyPawn, m_MaxStamina); } \
+	FORCEINLINE static uint32 __PPO__m_InvincibiltyTimerRate() { return STRUCT_OFFSET(AMyPawn, m_InvincibiltyTimerRate); } \
+	FORCEINLINE static uint32 __PPO__m_BonfireMenuWidget() { return STRUCT_OFFSET(AMyPawn, m_BonfireMenuWidget); } \
+	FORCEINLINE static uint32 __PPO__m_PauseMenuWidget() { return STRUCT_OFFSET(AMyPawn, m_PauseMenuWidget); } \
+	FORCEINLINE static uint32 __PPO__m_RefillStaminaTimerRate() { return STRUCT_OFFSET(AMyPawn, m_RefillStaminaTimerRate); }
 
 
 #define SideScroller_Source_SideScroller_MyPawn_h_21_PROLOG

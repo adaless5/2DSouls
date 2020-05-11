@@ -236,7 +236,7 @@ void AEnemyPawn::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimit
 			if (bDealDamageEnabled)
 			{
 				GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TEXT("Enemy made contact with player")); 
-				playerPawn->ApplyDamage(1); 
+				playerPawn->ApplyDamage(1.0f); 
 			}
 		}
 	}

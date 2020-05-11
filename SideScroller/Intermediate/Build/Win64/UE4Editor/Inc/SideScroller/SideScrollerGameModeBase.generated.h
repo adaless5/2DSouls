@@ -8,14 +8,37 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UUserWidget;
 #ifdef SIDESCROLLER_SideScrollerGameModeBase_generated_h
 #error "SideScrollerGameModeBase.generated.h already included, missing '#pragma once' in SideScrollerGameModeBase.h"
 #endif
 #define SIDESCROLLER_SideScrollerGameModeBase_generated_h
 
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_SPARSE_DATA
-#define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_RPC_WRAPPERS
-#define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execChangeMenuWidget) \
+	{ \
+		P_GET_OBJECT(UClass,Z_Param_NewWidgetClass); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ChangeMenuWidget(Z_Param_NewWidgetClass); \
+		P_NATIVE_END; \
+	}
+
+
+#define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execChangeMenuWidget) \
+	{ \
+		P_GET_OBJECT(UClass,Z_Param_NewWidgetClass); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ChangeMenuWidget(Z_Param_NewWidgetClass); \
+		P_NATIVE_END; \
+	}
+
+
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASideScrollerGameModeBase(); \
@@ -60,7 +83,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASideScrollerGameModeBase); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASideScrollerGameModeBase)
 
 
-#define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET
+#define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__m_CurrentWidget() { return STRUCT_OFFSET(ASideScrollerGameModeBase, m_CurrentWidget); }
+
+
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_12_PROLOG
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

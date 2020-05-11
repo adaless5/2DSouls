@@ -13,5 +13,14 @@ UCLASS()
 class SIDESCROLLER_API ASideScrollerGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+public: 
+	UFUNCTION(BlueprintCallable, Category = "UMG Game")
+		void ChangeMenuWidget(TSubclassOf<class UUserWidget> NewWidgetClass);
+
+protected:
+	virtual void BeginPlay() override; 
+
+	UPROPERTY()
+		UUserWidget* m_CurrentWidget; 
 };

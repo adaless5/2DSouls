@@ -15,6 +15,9 @@
 //#include "EnemyCharacter.h"
 #include "EnemyPawn.h"
 #include "TimerManager.h"
+#include "SideScroller/SideScrollerGameModeBase.h"
+#include "MainPlayerController.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -74,6 +77,7 @@ void AMyPawn::BeginPlay()
 	m_PlayerState = UPlayerState::Idle; 
 	m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f); 
 	m_LastVelocity = FVector(1.0f, 0.0f, 0.0f); 
+
 }
 
 // Called every frame
@@ -89,7 +93,6 @@ void AMyPawn::Tick(float DeltaTime)
 			SetActorLocation(NewLocation);
 		}
 	}
-	
 
 	m_AttackHitBox->SetWorldLocation(GetActorLocation() + FVector(0.08 * m_LastVelocity.X, 0.0f, 6.0f));
 
@@ -103,39 +106,58 @@ void AMyPawn::Tick(float DeltaTime)
 		m_ActiveFlipBook->SetFlipbook(m_Run);
 		break;
 	case UPlayerState::Attacking:
-		if (m_PlayerState != UPlayerState::Dead)
+		if (m_PlayerState != UPlayerState::Dead && m_CurrentStamina - 1.0f >= 0.0f)
 		{
 			m_ActiveFlipBook->SetFlipbook(m_Attack);
 			AttackPlaybackPositionInFrames = m_ActiveFlipBook->GetPlaybackPositionInFrames();
 			AttackFlipbookLengthInFrames = m_ActiveFlipBook->GetFlipbookLengthInFrames();
+			bIsRefillingStamina = false;
 
 			if (AttackPlaybackPositionInFrames == 5 || AttackPlaybackPositionInFrames == 11 || AttackPlaybackPositionInFrames == 18)
 			{
-				m_Box->AddImpulse(FVector(m_LastVelocity.X * m_AttackStepValue, 0.0f, 0.0f));
-			}
+				if (bStaminaReductionActive)
+				{
+					UWorld* World = GetWorld();
+					if (World)
+					{
+						World->GetTimerManager().ClearTimer(m_RefillStaminaTimerHandle);
+						World->GetTimerManager().SetTimer(m_RefillStaminaTimerHandle, this, &AMyPawn::RefillStamina, m_RefillStaminaTimerRate, false, m_RefillStaminaTimerRate);
+					}
+					m_CurrentStamina -= 1.0f;
+					m_Box->AddImpulse(FVector(m_LastVelocity.X * m_AttackStepValue, 0.0f, 0.0f));
+					bStaminaReductionActive = false;
+				}
 
-			if (bIsOverlappingEnemy)
-			{
-				if (AttackPlaybackPositionInFrames == 5 || AttackPlaybackPositionInFrames == 11 || AttackPlaybackPositionInFrames == 18)
+				GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Green, TEXT("Current Stamina: " + FString::FromInt(m_CurrentStamina))); 
+
+				if (bIsOverlappingEnemy)
 				{
 					if (bSwordDamageActive)
 					{
 						if (m_RecentEnemy != nullptr)
 						{
 							bSwordDamageActive = false;
-							GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Sword hit enemy"));
 
 							m_RecentEnemy->ApplyDamage(1);
 							m_RecentEnemy->GetBoxComponent()->AddImpulse(FVector(m_LastVelocity.X * 20.0f, 0.0f, 0.0f));
-						}
 
+							//Debug
+							GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Sword hit enemy"));
+						}
 					}
 				}
-				else
-				{
-					bSwordDamageActive = true;
-				}
 			}
+			else
+			{
+				bSwordDamageActive = true;
+				bStaminaReductionActive = true; 
+			}
+		}
+		else if (m_CurrentStamina - 1.0f < 0.0)
+		{
+			bStaminaReductionActive = false;
+			m_PlayerState = UPlayerState::Idle;
+			m_ActiveFlipBook->SetFlipbook(m_Idle);
 		}
 		break;
 	case UPlayerState::Jumping:
@@ -145,15 +167,39 @@ void AMyPawn::Tick(float DeltaTime)
 		m_ActiveFlipBook->SetFlipbook(m_Shield);
 		break;
 	case UPlayerState::Rolling:
-		m_ActiveFlipBook->SetFlipbook(m_Roll);
+		
+		if (bStaminaReductionActive)
+		{
+			if (m_CurrentStamina - 2.0f >= 0.0f)
+			{
+				UWorld* World = GetWorld();
+				if (World)
+				{
+					World->GetTimerManager().ClearTimer(m_RefillStaminaTimerHandle);
+					World->GetTimerManager().SetTimer(m_RefillStaminaTimerHandle, this, &AMyPawn::RefillStamina, m_RefillStaminaTimerRate, false, m_RefillStaminaTimerRate);
+				}
+				m_ActiveFlipBook->SetFlipbook(m_Roll);
+
+				GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Green, TEXT("Current Stamina: " + FString::FromInt(m_CurrentStamina)));
+
+				bStaminaReductionActive = false;
+			}
+		}
 		RollPlaybackPositionInFrames = m_ActiveFlipBook->GetPlaybackPositionInFrames();
 		RollFlipbookLengthInFrames = m_ActiveFlipBook->GetFlipbookLengthInFrames();
-
 		if (RollPlaybackPositionInFrames == RollFlipbookLengthInFrames - 1)
 		{
 			m_PlayerState = UPlayerState::Idle;
 			m_ActiveFlipBook->SetLooping(true);
 			m_ActiveFlipBook->PlayFromStart();
+			bStaminaReductionActive = true; 
+
+			UWorld* World = GetWorld();
+			if (World)
+			{
+				World->GetTimerManager().ClearTimer(m_RefillStaminaTimerHandle);
+				World->GetTimerManager().SetTimer(m_RefillStaminaTimerHandle, this, &AMyPawn::RefillStamina, m_RefillStaminaTimerRate, false, m_RefillStaminaTimerRate);
+			}
 		}
 		break;
 	case UPlayerState::Dead:
@@ -165,6 +211,17 @@ void AMyPawn::Tick(float DeltaTime)
 	{
 		m_PlayerState = UPlayerState::Idle;
 	}
+
+	if (bIsRefillingStamina)
+	{
+		m_CurrentStamina += DeltaTime; 
+
+		if (m_CurrentStamina >= m_MaxStamina)
+		{
+			m_CurrentStamina = m_MaxStamina; 
+			bIsRefillingStamina = false; 
+		}
+	}
 }
 
 // Called to bind functionality to input
@@ -172,19 +229,6 @@ void AMyPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAxis("MoveX", this, &AMyPawn::Move_X_Axis); 
-	PlayerInputComponent->BindAxis("MoveY", this, &AMyPawn::Move_Y_Axis); 
-
-	PlayerInputComponent->BindAction("Attack", IE_Pressed, this, &AMyPawn::Attack); 
-	PlayerInputComponent->BindAction("Attack", IE_Released, this, &AMyPawn::StopAttacking); 
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyPawn::Jump); 
-
-	PlayerInputComponent->BindAction("Shield", IE_Pressed, this, &AMyPawn::Shield); 
-	PlayerInputComponent->BindAction("Shield", IE_Released, this, &AMyPawn::ShieldRelease); 
-
-	PlayerInputComponent->BindAction("Roll", IE_Pressed, this, &AMyPawn::Roll); 
-
-	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &AMyPawn::InteractWithBonfire);
 }
 
 void AMyPawn::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
@@ -223,6 +267,8 @@ void AMyPawn::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AAct
 			//m_RecentBeast = nullptr; 
 			m_RecentEnemy = nullptr; 
 			bIsOverlappingEnemy = false;
+
+			//Debug
 			GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, TEXT("Sword out of contact with enemy."));
 		}
 	}
@@ -233,7 +279,7 @@ void AMyPawn::SetIsNearBonfire(bool isNear)
 	bIsNearBonfire = isNear; 
 }
 
-void AMyPawn::ApplyDamage(int damage)
+void AMyPawn::ApplyDamage(float damage)
 {
 	if (m_PlayerState != UPlayerState::Dead)
 	{
@@ -245,17 +291,14 @@ void AMyPawn::ApplyDamage(int damage)
 				World->GetTimerManager().ClearTimer(m_InvincibilityTimerHandle);
 				World->GetTimerManager().SetTimer(m_InvincibilityTimerHandle, this, &AMyPawn::SetCanBeDamaged, m_InvincibiltyTimerRate, false, m_InvincibiltyTimerRate);
 			}
-			m_TotalHealth -= damage;
-			if (m_TotalHealth < 1)
+			m_CurentHealth -= damage;
+			if (m_CurentHealth < 1)
 			{
 				//m_TotalHealth = 0;
 				m_PlayerState = UPlayerState::Dead;
 				return;
 			}
 			bCanBeDamaged = false;
-
-			FString IntAsString = FString::FromInt(m_TotalHealth);
-			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TEXT("Player Health: " + IntAsString));
 		}
 	}
 }
@@ -263,6 +306,48 @@ void AMyPawn::ApplyDamage(int damage)
 void AMyPawn::SetCanBeDamaged()
 {
 	bCanBeDamaged = true; 
+}
+
+void AMyPawn::IncreaseMaxHealth(float StatIncrease)
+{
+	m_MaxHealth += StatIncrease; 
+	m_CurentHealth = m_MaxHealth; 
+
+	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Purple, TEXT("New Max Health: " + FString::FromInt(m_MaxHealth))); 
+}
+
+void AMyPawn::IncreaseMaxStamina(float StatIncrease)
+{
+	m_MaxStamina += StatIncrease;
+	m_CurrentStamina = m_MaxStamina;
+
+	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Purple, TEXT("New Max Stamina: " + FString::FromInt(m_MaxStamina)));
+
+}
+
+float AMyPawn::GetMaxHealth()
+{
+	return m_MaxHealth;
+}
+
+float AMyPawn::GetHealthPercentage()
+{
+	return m_CurentHealth / m_MaxHealth;
+}
+
+float AMyPawn::GetStaminaPercentage()
+{
+	return m_CurrentStamina / m_MaxStamina;
+}
+
+void AMyPawn::SetIsInMenu(bool IsInMenu)
+{
+	bIsInMenu = IsInMenu; 
+}
+
+void AMyPawn::RefillStamina()
+{
+	bIsRefillingStamina = true; 
 }
 
 void AMyPawn::Move_X_Axis(float value)
@@ -309,21 +394,29 @@ void AMyPawn::Move_Y_Axis(float value)
 
 void AMyPawn::Attack()
 {
-	if (m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Dead)
+	if (m_CurrentStamina - 1 >= 0.0f)
 	{
-		m_PlayerState = UPlayerState::Attacking;
-		m_ActiveFlipBook->SetFlipbook(m_Attack);
-
-		m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
-
-		if (m_LastVelocity.X > 0)
+		if (m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Dead)
 		{
-			m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 0.0f, 0.0f));
+			m_PlayerState = UPlayerState::Attacking;
+			m_ActiveFlipBook->SetFlipbook(m_Attack);
+
+			m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
+
+			if (m_LastVelocity.X > 0)
+			{
+				m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 0.0f, 0.0f));
+			}
+			if (m_LastVelocity.X < 0)
+			{
+				m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 180.0f, 0.0f));
+			}
 		}
-		if (m_LastVelocity.X < 0)
-		{
-			m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 180.0f, 0.0f));
-		}
+	}
+	else
+	{
+		m_PlayerState = UPlayerState::Idle; 
+		m_ActiveFlipBook->SetFlipbook(m_Idle); 
 	}
 }
 
@@ -359,22 +452,30 @@ void AMyPawn::Jump()
 
 void AMyPawn::Roll()
 {
-	if (m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Dead)
+	if (m_CurrentStamina - 2.0f >= 0.0f)
 	{
-		m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
-		m_PlayerState = UPlayerState::Rolling;
-		m_ActiveFlipBook->SetFlipbook(m_Roll); 
-		//m_ActiveFlipBook->SetLooping(false);
-		m_ActiveFlipBook->PlayFromStart();
-		m_Box->AddImpulse(FVector(m_LastVelocity.X * m_RollValue, 0.0f, 0.0f));
+		if (m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Dead)
+		{
+			bIsRefillingStamina = false;
+			m_CurrentStamina -= 2.0f;
+			m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
+			m_PlayerState = UPlayerState::Rolling;
+			m_ActiveFlipBook->SetFlipbook(m_Roll); 
+			//m_ActiveFlipBook->SetLooping(false);
+			m_ActiveFlipBook->PlayFromStart();
+			m_Box->AddImpulse(FVector(m_LastVelocity.X * m_RollValue, 0.0f, 0.0f));
+		}
 	}
 }
 
 void AMyPawn::Shield()
 {
-	m_PlayerState = UPlayerState::Shielding;
-	m_ActiveFlipBook->SetFlipbook(m_Shield); 
-	m_ActiveFlipBook->SetLooping(false);	
+	if (m_PlayerState != UPlayerState::Rolling)
+	{
+		m_PlayerState = UPlayerState::Shielding;
+		m_ActiveFlipBook->SetFlipbook(m_Shield);
+		m_ActiveFlipBook->SetLooping(false);
+	}
 }
 
 void AMyPawn::ShieldRelease()
@@ -395,8 +496,40 @@ void AMyPawn::InteractWithBonfire()
 {
 	if (bIsNearBonfire == true && bIsInMenu == false)
 	{
-		bIsInMenu = true;
-		GEngine->AddOnScreenDebugMessage(-1, 0.5, FColor::Yellow, TEXT("Interacted with bonfire."));
+		UWorld* World = GetWorld(); 
+
+		if (World)
+		{
+			if (ASideScrollerGameModeBase* pGameMode = Cast<ASideScrollerGameModeBase>(World->GetAuthGameMode()))
+			{
+				bIsInMenu = true;
+				GEngine->AddOnScreenDebugMessage(-1, 0.5, FColor::Yellow, TEXT("Interacted with bonfire."));
+				pGameMode->ChangeMenuWidget(m_BonfireMenuWidget);
+
+				AMainPlayerController* pPC = Cast<AMainPlayerController>(UGameplayStatics::GetPlayerController(World, 0));
+				pPC->bShowMouseCursor = true;
+			}
+		}
+	}
+}
+
+void AMyPawn::PauseGame()
+{
+	if (!bIsInMenu)
+	{
+		UWorld* World = GetWorld();
+
+		if (World)
+		{
+			if (ASideScrollerGameModeBase* pGameMode = Cast<ASideScrollerGameModeBase>(World->GetAuthGameMode()))
+			{
+				bIsInMenu = true;
+				pGameMode->ChangeMenuWidget(m_PauseMenuWidget);
+
+				AMainPlayerController* pPC = Cast<AMainPlayerController>(UGameplayStatics::GetPlayerController(World, 0));
+				pPC->bShowMouseCursor = true;
+			}
+		}
 	}
 }
 

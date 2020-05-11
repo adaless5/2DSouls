@@ -52,6 +52,7 @@ public:
 	virtual void ShieldRelease(); 
 
 	virtual void InteractWithBonfire(); 
+	virtual void PauseGame(); 
 
 	virtual UPlayerState GetPlayerState(); 
 
@@ -66,8 +67,28 @@ public:
 
 	virtual void SetIsNearBonfire(bool isNear); 
 
-	void ApplyDamage(int damage); 
+	void ApplyDamage(float damage); 
 	void SetCanBeDamaged(); 
+
+	UFUNCTION(BlueprintCallable)
+		void IncreaseMaxHealth(float StatIncrease); 
+
+	UFUNCTION(BlueprintCallable)
+		void IncreaseMaxStamina(float StatIncrease); 
+
+	UFUNCTION(BlueprintCallable)
+		float GetMaxHealth(); 
+
+	UFUNCTION(BlueprintCallable)
+		float GetHealthPercentage();
+
+	UFUNCTION(BlueprintCallable)
+		float GetStaminaPercentage(); 
+
+	UFUNCTION(BlueprintCallable)
+		void SetIsInMenu(bool IsInMenu);
+
+	void RefillStamina(); 
 
 protected: 
 
@@ -117,12 +138,32 @@ protected:
 		TEnumAsByte<UPlayerState> m_LastPlayerState;
 
 	UPROPERTY(EditAnywhere, Category = "Player")
-		int m_TotalHealth = 3; 
+		float m_CurentHealth = 3.0f; 
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		float m_MaxHealth = 3.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		float m_CurrentStamina = 4.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		float m_MaxStamina = 4.0f; 
 
 	FTimerHandle m_InvincibilityTimerHandle; 
 
 	UPROPERTY(EditAnywhere, Category = "Player")
 		float m_InvincibiltyTimerRate = 3.0f; 
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Menus")
+		TSubclassOf<UUserWidget> m_BonfireMenuWidget; 
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Menus")
+		TSubclassOf<UUserWidget> m_PauseMenuWidget; 
+
+	FTimerHandle m_RefillStaminaTimerHandle;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		float m_RefillStaminaTimerRate = 2.0f; 
 
 	FVector m_CurrentVelocity; 
 	FVector m_LastVelocity; 
@@ -135,8 +176,10 @@ protected:
 	bool bIsNearBonfire = false;
 	bool bIsInMenu = false;
 	bool bSwordDamageActive = true;
+	bool bStaminaReductionActive = true; 
 	bool bIsOverlappingEnemy = false;
 	bool bCanBeDamaged = true; 
+	bool bIsRefillingStamina = false;
 
 	class ABeastPawn* m_RecentBeast = nullptr; 
 	//class AEnemyCharacter* m_RecentEnemy = nullptr; 
