@@ -41,3 +41,5 @@ D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Eng
 D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
 D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
 D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\EXPActor.h
+D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller\EXPActor.generated.h

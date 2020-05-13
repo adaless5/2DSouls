@@ -127,7 +127,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEnemyPawn); \
 	FORCEINLINE static uint32 __PPO__m_StartPatrolTimerRate() { return STRUCT_OFFSET(AEnemyPawn, m_StartPatrolTimerRate); } \
 	FORCEINLINE static uint32 __PPO__m_AttackTimerRate() { return STRUCT_OFFSET(AEnemyPawn, m_AttackTimerRate); } \
 	FORCEINLINE static uint32 __PPO__m_WaitTimerRate() { return STRUCT_OFFSET(AEnemyPawn, m_WaitTimerRate); } \
-	FORCEINLINE static uint32 __PPO__m_PatrolPoints() { return STRUCT_OFFSET(AEnemyPawn, m_PatrolPoints); }
+	FORCEINLINE static uint32 __PPO__m_PatrolPoints() { return STRUCT_OFFSET(AEnemyPawn, m_PatrolPoints); } \
+	FORCEINLINE static uint32 __PPO__EXPTemplate() { return STRUCT_OFFSET(AEnemyPawn, EXPTemplate); } \
+	FORCEINLINE static uint32 __PPO__m_ExperienceValue() { return STRUCT_OFFSET(AEnemyPawn, m_ExperienceValue); } \
+	FORCEINLINE static uint32 __PPO__m_NumberOfExperience() { return STRUCT_OFFSET(AEnemyPawn, m_NumberOfExperience); }
 
 
 #define SideScroller_Source_SideScroller_EnemyPawn_h_22_PROLOG

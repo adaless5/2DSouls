@@ -3,6 +3,9 @@
 
 #include "SideScrollerGameModeBase.h"
 #include "Blueprint/UserWidget.h"
+#include "Kismet/GameplayStatics.h"
+#include "Engine/World.h"
+#include "MyPawn.h"
 
 void ASideScrollerGameModeBase::BeginPlay()
 {
@@ -26,4 +29,27 @@ void ASideScrollerGameModeBase::ChangeMenuWidget(TSubclassOf<UUserWidget> NewWid
 			m_CurrentWidget->AddToViewport(); 
 		}
 	}
+}
+
+int ASideScrollerGameModeBase::GetHealthIncreaseCost()
+{
+	if (AMyPawn* pPlayerPawn = Cast<AMyPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0)))
+	{
+		m_HealthIncreaseCost = pPlayerPawn->GetMaxHealth() * 100;
+	}
+	return m_HealthIncreaseCost; 
+}
+
+int ASideScrollerGameModeBase::GetStaminaIncreaseCost()
+{
+	if (AMyPawn* pPlayerPawn = Cast<AMyPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0)))
+	{
+		m_StaminaIncreaseCost = pPlayerPawn->GetMaxStamina() * 100;
+	}
+	return m_StaminaIncreaseCost; 
+}
+
+int ASideScrollerGameModeBase::GetMagicIncreaseCost()
+{
+	return m_MagicIncreaseCost; 
 }

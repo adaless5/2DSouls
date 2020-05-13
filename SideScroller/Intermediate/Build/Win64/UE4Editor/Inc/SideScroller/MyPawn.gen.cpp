@@ -20,7 +20,9 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_GetHealthPercentage();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_GetMaxHealth();
+	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_GetMaxStamina();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_GetStaminaPercentage();
+	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_GetTotalExperience();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_IncreaseMaxHealth();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_IncreaseMaxStamina();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_OnHit();
@@ -31,6 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_OnOverlapBegin();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_OnOverlapEnd();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_SetIsInMenu();
+	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AMyPawn_SpendEXP();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
@@ -114,13 +117,16 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetHealthPercentage", &AMyPawn::execGetHealthPercentage },
 			{ "GetMaxHealth", &AMyPawn::execGetMaxHealth },
+			{ "GetMaxStamina", &AMyPawn::execGetMaxStamina },
 			{ "GetStaminaPercentage", &AMyPawn::execGetStaminaPercentage },
+			{ "GetTotalExperience", &AMyPawn::execGetTotalExperience },
 			{ "IncreaseMaxHealth", &AMyPawn::execIncreaseMaxHealth },
 			{ "IncreaseMaxStamina", &AMyPawn::execIncreaseMaxStamina },
 			{ "OnHit", &AMyPawn::execOnHit },
 			{ "OnOverlapBegin", &AMyPawn::execOnOverlapBegin },
 			{ "OnOverlapEnd", &AMyPawn::execOnOverlapEnd },
 			{ "SetIsInMenu", &AMyPawn::execSetIsInMenu },
+			{ "SpendEXP", &AMyPawn::execSpendEXP },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -188,6 +194,38 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics
+	{
+		struct MyPawn_eventGetMaxStamina_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPawn_eventGetMaxStamina_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPawn, nullptr, "GetMaxStamina", nullptr, nullptr, sizeof(MyPawn_eventGetMaxStamina_Parms), Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPawn_GetMaxStamina()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPawn_GetMaxStamina_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AMyPawn_GetStaminaPercentage_Statics
 	{
 		struct MyPawn_eventGetStaminaPercentage_Parms
@@ -217,6 +255,38 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPawn_GetStaminaPercentage_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics
+	{
+		struct MyPawn_eventGetTotalExperience_Parms
+		{
+			int32 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPawn_eventGetTotalExperience_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPawn, nullptr, "GetTotalExperience", nullptr, nullptr, sizeof(MyPawn_eventGetTotalExperience_Parms), Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPawn_GetTotalExperience()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPawn_GetTotalExperience_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -534,6 +604,38 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AMyPawn_SpendEXP_Statics
+	{
+		struct MyPawn_eventSpendEXP_Parms
+		{
+			int32 value;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_value;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPawn_eventSpendEXP_Parms, value), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::NewProp_value,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPawn, nullptr, "SpendEXP", nullptr, nullptr, sizeof(MyPawn_eventSpendEXP_Parms), Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPawn_SpendEXP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPawn_SpendEXP_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AMyPawn_NoRegister()
 	{
 		return AMyPawn::StaticClass();
@@ -658,13 +760,16 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMyPawn_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMyPawn_GetHealthPercentage, "GetHealthPercentage" }, // 2866157054
 		{ &Z_Construct_UFunction_AMyPawn_GetMaxHealth, "GetMaxHealth" }, // 1926057057
+		{ &Z_Construct_UFunction_AMyPawn_GetMaxStamina, "GetMaxStamina" }, // 1047728833
 		{ &Z_Construct_UFunction_AMyPawn_GetStaminaPercentage, "GetStaminaPercentage" }, // 2018626308
+		{ &Z_Construct_UFunction_AMyPawn_GetTotalExperience, "GetTotalExperience" }, // 1450495919
 		{ &Z_Construct_UFunction_AMyPawn_IncreaseMaxHealth, "IncreaseMaxHealth" }, // 3851847973
 		{ &Z_Construct_UFunction_AMyPawn_IncreaseMaxStamina, "IncreaseMaxStamina" }, // 1013892851
 		{ &Z_Construct_UFunction_AMyPawn_OnHit, "OnHit" }, // 3173832315
 		{ &Z_Construct_UFunction_AMyPawn_OnOverlapBegin, "OnOverlapBegin" }, // 3628453845
 		{ &Z_Construct_UFunction_AMyPawn_OnOverlapEnd, "OnOverlapEnd" }, // 334908392
 		{ &Z_Construct_UFunction_AMyPawn_SetIsInMenu, "SetIsInMenu" }, // 2124483646
+		{ &Z_Construct_UFunction_AMyPawn_SpendEXP, "SpendEXP" }, // 542576983
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPawn_Statics::Class_MetaDataParams[] = {
@@ -911,7 +1016,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPawn, 1697346797);
+	IMPLEMENT_CLASS(AMyPawn, 319933408);
 	template<> SIDESCROLLER_API UClass* StaticClass<AMyPawn>()
 	{
 		return AMyPawn::StaticClass();

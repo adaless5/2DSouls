@@ -24,6 +24,8 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AEnemyPawn_SetEnemyState();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	SIDESCROLLER_API UClass* Z_Construct_UClass_AEXPActor_NoRegister();
 	SIDESCROLLER_API UClass* Z_Construct_UClass_AMyPawn_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbookComponent_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbook_NoRegister();
@@ -225,6 +227,18 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_NumberOfExperience_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_NumberOfExperience;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_ExperienceValue_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUInt32PropertyParams NewProp_m_ExperienceValue;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EXPTemplate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_EXPTemplate;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_PatrolPoints_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_m_PatrolPoints;
@@ -312,6 +326,27 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 		{ "ModuleRelativePath", "EnemyPawn.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_NumberOfExperience_MetaData[] = {
+		{ "Category", "EXP" },
+		{ "ModuleRelativePath", "EnemyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_NumberOfExperience = { "m_NumberOfExperience", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyPawn, m_NumberOfExperience), METADATA_PARAMS(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_NumberOfExperience_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_NumberOfExperience_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_ExperienceValue_MetaData[] = {
+		{ "Category", "EXP" },
+		{ "ModuleRelativePath", "EnemyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_ExperienceValue = { "m_ExperienceValue", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyPawn, m_ExperienceValue), METADATA_PARAMS(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_ExperienceValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_ExperienceValue_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyPawn_Statics::NewProp_EXPTemplate_MetaData[] = {
+		{ "Category", "EXP" },
+		{ "ModuleRelativePath", "EnemyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AEnemyPawn_Statics::NewProp_EXPTemplate = { "EXPTemplate", nullptr, (EPropertyFlags)0x0024080000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyPawn, EXPTemplate), Z_Construct_UClass_AEXPActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_EXPTemplate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_EXPTemplate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_PatrolPoints_MetaData[] = {
 		{ "Category", "Enemy" },
@@ -435,6 +470,9 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_BodyHitBox = { "m_BodyHitBox", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyPawn, m_BodyHitBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_BodyHitBox_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_BodyHitBox_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemyPawn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_NumberOfExperience,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_ExperienceValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_EXPTemplate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_PatrolPoints,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_PatrolPoints_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_WaitTimerRate,
@@ -481,7 +519,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyPawn, 4170058403);
+	IMPLEMENT_CLASS(AEnemyPawn, 2581321975);
 	template<> SIDESCROLLER_API UClass* StaticClass<AEnemyPawn>()
 	{
 		return AEnemyPawn::StaticClass();

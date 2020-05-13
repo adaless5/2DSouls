@@ -20,12 +20,29 @@ struct FVector;
 #define SideScroller_Source_SideScroller_MyPawn_h_24_SPARSE_DATA
 #define SideScroller_Source_SideScroller_MyPawn_h_24_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSpendEXP) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_value); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SpendEXP(Z_Param_value); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSetIsInMenu) \
 	{ \
 		P_GET_UBOOL(Z_Param_IsInMenu); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetIsInMenu(Z_Param_IsInMenu); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetTotalExperience) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetTotalExperience(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -42,6 +59,14 @@ struct FVector;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(float*)Z_Param__Result=P_THIS->GetHealthPercentage(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetMaxStamina) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetMaxStamina(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -113,12 +138,29 @@ struct FVector;
 
 #define SideScroller_Source_SideScroller_MyPawn_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execSpendEXP) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_value); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SpendEXP(Z_Param_value); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSetIsInMenu) \
 	{ \
 		P_GET_UBOOL(Z_Param_IsInMenu); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetIsInMenu(Z_Param_IsInMenu); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetTotalExperience) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetTotalExperience(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -135,6 +177,14 @@ struct FVector;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(float*)Z_Param__Result=P_THIS->GetHealthPercentage(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetMaxStamina) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetMaxStamina(); \
 		P_NATIVE_END; \
 	} \
  \

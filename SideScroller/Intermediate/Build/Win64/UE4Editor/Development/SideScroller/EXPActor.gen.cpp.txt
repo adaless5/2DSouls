@@ -1,0 +1,5 @@
+D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Development\SideScroller\Definitions.SideScroller.h
+D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller/EXPActor.h
+D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller\EXPActor.generated.h

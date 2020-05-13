@@ -12,6 +12,8 @@
 #include "MyPawn.h"
 #include "TimerManager.h"
 #include "Engine/World.h"
+#include "EXPActor.h"
+#include "Components/SphereComponent.h"
 
 // Sets default values
 AEnemyPawn::AEnemyPawn()
@@ -71,16 +73,32 @@ void AEnemyPawn::Tick(float DeltaTime)
 		//m_ActiveFlipbook->SetFlipbook(m_DeathFlipbook); 
 		if (m_CurrentState != Enemy_Dead)
 		{
-			SetEnemyState(Enemy_Dead); 
+			m_BodyHitBox->SetSimulatePhysics(false);
+			m_BodyHitBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			m_BodyHitBox->SetCollisionProfileName("NoCollision");
+
+			SetEnemyState(Enemy_Dead);
+
+			/*for (int i = 0; i < m_NumberOfExperience; i++)
+			{
+				SpawnExperience();
+			}*/
+
+			UWorld* World = GetWorld();
+
+				if (World)
+				{
+					World->GetTimerManager().SetTimer(m_SpawnExperienceTimer, this, &AEnemyPawn::SpawnExperience, m_SpawnExperienceTimerRate, true); 
+				}
 		}
 
 		DeathPlaybackPositionInFrames = m_ActiveFlipbook->GetPlaybackPositionInFrames();
 		DeathFlipbookLengthInFrames = m_ActiveFlipbook->GetFlipbookLengthInFrames();
 
-		if (DeathPlaybackPositionInFrames == DeathFlipbookLengthInFrames)
+		if (DeathPlaybackPositionInFrames == DeathFlipbookLengthInFrames - 1)
 		{
 			//GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TEXT("Enemy slain."));
-			m_BodyHitBox->SetCollisionEnabled(ECollisionEnabled::NoCollision); 
+			
 		}
 	}
 
@@ -294,6 +312,40 @@ void AEnemyPawn::FindNextPatrolPoint()
 
 	if (m_PatrolPointIndex > 2)
 		m_PatrolPointIndex = 0;
+}
+
+void AEnemyPawn::SpawnExperience()
+{
+	if (m_ExperienceSpawnedCounter < m_NumberOfExperience)
+	{
+		if (EXPTemplate)
+		{
+			UWorld* World = GetWorld();
+
+			if (World)
+			{
+				FActorSpawnParameters SpawnParams; 
+				SpawnParams.Owner = this; 
+				SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn; 
+				FTransform SpawnTransform = GetActorTransform(); 
+				AEXPActor* SpawnedEXP = World->SpawnActor<AEXPActor>(EXPTemplate, SpawnTransform, SpawnParams); 
+
+				if (SpawnedEXP)
+				{
+					SpawnedEXP->SetExperienceValue(m_ExperienceValue); 
+					float RandomX = FMath::RandRange(-500.0f, 500.0f);
+					float RandomY = FMath::RandRange(-500.0f, 500.0f); 
+					USphereComponent* pCollisionComponent = SpawnedEXP->GetSphereComponent(); 
+					pCollisionComponent->AddImpulse(FVector(RandomX, RandomY, 500.0f)); 
+				}
+			}
+		}
+		m_ExperienceSpawnedCounter++; 
+	}
+	else
+	{
+		GetWorld()->GetTimerManager().ClearTimer(m_SpawnExperienceTimer); 
+	}
 }
 
 UBoxComponent* AEnemyPawn::GetBoxComponent()

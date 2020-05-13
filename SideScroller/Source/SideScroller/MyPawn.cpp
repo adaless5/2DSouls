@@ -18,6 +18,7 @@
 #include "SideScroller/SideScrollerGameModeBase.h"
 #include "MainPlayerController.h"
 #include "Kismet/GameplayStatics.h"
+#include "EXPActor.h"
 
 
 // Sets default values
@@ -241,6 +242,15 @@ void AMyPawn::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitive
 			//bCanJump = true;
 			m_PlayerState = UPlayerState::Idle; 
 		}
+		if (AEXPActor* pEXP = Cast<AEXPActor>(OtherActor))
+		{
+			m_TotalExperience += pEXP->GetExperienceValue();
+
+			FString experiencepoints = FString::FromInt(m_TotalExperience); 
+			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Total Exp: " + experiencepoints)); 
+
+			pEXP->Destroy(); 
+		}
 	}
 }
 
@@ -252,6 +262,7 @@ void AMyPawn::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherA
 		{
 			//m_RecentBeast = Cast<ABeastPawn>(OtherActor);
 			m_RecentEnemy = Cast<AEnemyPawn>(OtherActor); 
+
 			bIsOverlappingEnemy = true;
 			GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, TEXT("Sword in contact with enemy."));
 		}
@@ -330,6 +341,11 @@ float AMyPawn::GetMaxHealth()
 	return m_MaxHealth;
 }
 
+float AMyPawn::GetMaxStamina()
+{
+	return m_MaxStamina;
+}
+
 float AMyPawn::GetHealthPercentage()
 {
 	return m_CurentHealth / m_MaxHealth;
@@ -340,6 +356,11 @@ float AMyPawn::GetStaminaPercentage()
 	return m_CurrentStamina / m_MaxStamina;
 }
 
+int AMyPawn::GetTotalExperience()
+{
+	return m_TotalExperience;
+}
+
 void AMyPawn::SetIsInMenu(bool IsInMenu)
 {
 	bIsInMenu = IsInMenu; 
@@ -348,6 +369,11 @@ void AMyPawn::SetIsInMenu(bool IsInMenu)
 void AMyPawn::RefillStamina()
 {
 	bIsRefillingStamina = true; 
+}
+
+void AMyPawn::SpendEXP(int value)
+{
+	m_TotalExperience -= value; 
 }
 
 void AMyPawn::Move_X_Axis(float value)

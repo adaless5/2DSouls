@@ -77,7 +77,10 @@ public:
 		void IncreaseMaxStamina(float StatIncrease); 
 
 	UFUNCTION(BlueprintCallable)
-		float GetMaxHealth(); 
+		float GetMaxHealth();
+
+	UFUNCTION(BlueprintCallable)
+		float GetMaxStamina(); 
 
 	UFUNCTION(BlueprintCallable)
 		float GetHealthPercentage();
@@ -86,9 +89,15 @@ public:
 		float GetStaminaPercentage(); 
 
 	UFUNCTION(BlueprintCallable)
+		int GetTotalExperience(); 
+
+	UFUNCTION(BlueprintCallable)
 		void SetIsInMenu(bool IsInMenu);
 
 	void RefillStamina(); 
+
+	UFUNCTION(BlueprintCallable)
+		void SpendEXP(int value); 
 
 protected: 
 
@@ -184,4 +193,6 @@ protected:
 	class ABeastPawn* m_RecentBeast = nullptr; 
 	//class AEnemyCharacter* m_RecentEnemy = nullptr; 
 	class AEnemyPawn* m_RecentEnemy = nullptr; 
+
+	int32 m_TotalExperience = 0; 
 };

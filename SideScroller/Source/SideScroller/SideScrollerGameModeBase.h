@@ -18,9 +18,22 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "UMG Game")
 		void ChangeMenuWidget(TSubclassOf<class UUserWidget> NewWidgetClass);
 
+	UFUNCTION(BlueprintCallable)
+		int GetHealthIncreaseCost();
+
+	UFUNCTION(BlueprintCallable)
+		int GetStaminaIncreaseCost(); 
+
+	UFUNCTION(BlueprintCallable)
+		int GetMagicIncreaseCost(); 
+
 protected:
 	virtual void BeginPlay() override; 
 
 	UPROPERTY()
-		UUserWidget* m_CurrentWidget; 
+		UUserWidget* m_CurrentWidget;
+
+	int m_HealthIncreaseCost;
+	int m_StaminaIncreaseCost; 
+	int m_MagicIncreaseCost; 
 };

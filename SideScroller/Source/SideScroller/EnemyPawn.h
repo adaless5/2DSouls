@@ -51,6 +51,8 @@ public:
 	void StartPatrol();
 	void FindNextPatrolPoint(); 
 
+	void SpawnExperience(); 
+
 protected:
 	UPROPERTY(EditAnywhere, Category = "Enemy")
 		class UBoxComponent* m_BodyHitBox;
@@ -120,6 +122,23 @@ protected:
 	int m_PatrolPointIndex = 0; 
 
 	bool bDealDamageEnabled = false;
+
+	UPROPERTY(EditDefaultsOnly, Category = "EXP")
+		TSubclassOf<class AEXPActor> EXPTemplate; 
+
+	UPROPERTY(EditAnywhere, Category = "EXP")
+		uint32 m_ExperienceValue = 0; 
+
+	UPROPERTY(EditAnywhere, Category = "EXP")
+		int m_NumberOfExperience = 3;
+
+	int m_ExperienceSpawnedCounter = 0; 
+
+	//int m_NumberOfExperience = 3; 
+
+	FTimerHandle m_SpawnExperienceTimer; 
+
+	float m_SpawnExperienceTimerRate = 0.1f; 
 
 public:
 	UBoxComponent* GetBoxComponent();

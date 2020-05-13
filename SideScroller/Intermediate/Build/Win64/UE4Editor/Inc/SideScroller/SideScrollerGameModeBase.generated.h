@@ -17,6 +17,30 @@ class UUserWidget;
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_SPARSE_DATA
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetMagicIncreaseCost) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetMagicIncreaseCost(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetStaminaIncreaseCost) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetStaminaIncreaseCost(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetHealthIncreaseCost) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetHealthIncreaseCost(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execChangeMenuWidget) \
 	{ \
 		P_GET_OBJECT(UClass,Z_Param_NewWidgetClass); \
@@ -28,6 +52,30 @@ class UUserWidget;
 
 
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetMagicIncreaseCost) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetMagicIncreaseCost(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetStaminaIncreaseCost) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetStaminaIncreaseCost(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetHealthIncreaseCost) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetHealthIncreaseCost(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execChangeMenuWidget) \
 	{ \
