@@ -140,6 +140,9 @@ protected:
 
 	float m_SpawnExperienceTimerRate = 0.1f; 
 
+	UPROPERTY(EditAnywhere, Category = "Effects")
+		UParticleSystem* BloodFX; 
+
 public:
 	UBoxComponent* GetBoxComponent();
 };

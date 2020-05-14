@@ -14,6 +14,7 @@
 #include "Engine/World.h"
 #include "EXPActor.h"
 #include "Components/SphereComponent.h"
+#include "Particles/ParticleSystemComponent.h"
 
 // Sets default values
 AEnemyPawn::AEnemyPawn()
@@ -45,6 +46,8 @@ AEnemyPawn::AEnemyPawn()
 	m_DeathFlipbook = CreateDefaultSubobject<UPaperFlipbook>(TEXT("DeathAnimation"));
 	m_RunningFlipbook = CreateDefaultSubobject<UPaperFlipbook>(TEXT("RunningAnimation"));
 	m_AttackingFlipbook = CreateDefaultSubobject<UPaperFlipbook>(TEXT("AttackingAnimation"));
+
+	BloodFX = CreateDefaultSubobject<UParticleSystem>(TEXT("BloodFX")); 
 }
 
 // Called when the game starts or when spawned
@@ -215,6 +218,7 @@ void AEnemyPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 
 void AEnemyPawn::ApplyDamage(int32 damage)
 {
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), BloodFX, GetActorLocation(), FRotator::ZeroRotator, true); 
 	m_TotalHealth -= damage;
 }
 

@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_AEnemyPawn_SetEnemyState();
+	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	SIDESCROLLER_API UClass* Z_Construct_UClass_AEXPActor_NoRegister();
 	SIDESCROLLER_API UClass* Z_Construct_UClass_AMyPawn_NoRegister();
@@ -227,6 +228,10 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BloodFX_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BloodFX;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_NumberOfExperience_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_NumberOfExperience;
@@ -326,6 +331,13 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 		{ "ModuleRelativePath", "EnemyPawn.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyPawn_Statics::NewProp_BloodFX_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "EnemyPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyPawn_Statics::NewProp_BloodFX = { "BloodFX", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyPawn, BloodFX), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_BloodFX_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_BloodFX_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_NumberOfExperience_MetaData[] = {
 		{ "Category", "EXP" },
@@ -470,6 +482,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_BodyHitBox = { "m_BodyHitBox", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyPawn, m_BodyHitBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_BodyHitBox_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_BodyHitBox_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemyPawn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_BloodFX,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_NumberOfExperience,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_m_ExperienceValue,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyPawn_Statics::NewProp_EXPTemplate,
@@ -519,7 +532,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyPawn, 2581321975);
+	IMPLEMENT_CLASS(AEnemyPawn, 3538654021);
 	template<> SIDESCROLLER_API UClass* StaticClass<AEnemyPawn>()
 	{
 		return AEnemyPawn::StaticClass();
