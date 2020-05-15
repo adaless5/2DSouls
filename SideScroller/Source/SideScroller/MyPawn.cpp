@@ -236,21 +236,31 @@ void AMyPawn::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitive
 {
 	if (HitComp->ComponentHasTag(TEXT("PlayerHitBox")))
 	{
-		if (OtherComp->ComponentHasTag("Ground") && m_PlayerState == UPlayerState::Jumping && m_PlayerState != UPlayerState::Dead)
+		if (NormalImpulse.Z > 0 && m_PlayerState == UPlayerState::Jumping && m_PlayerState != UPlayerState::Dead)
 		{
-			m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f); 
+			m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
 			//bCanJump = true;
-			m_PlayerState = UPlayerState::Idle; 
+			m_PlayerState = UPlayerState::Idle;
 		}
+		//if (OtherComp != nullptr)
+		//{
+		//	if (OtherComp->ComponentHasTag("Ground") && m_PlayerState == UPlayerState::Jumping && m_PlayerState != UPlayerState::Dead)
+		//	{
+		//		m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
+		//		//bCanJump = true;
+		//		m_PlayerState = UPlayerState::Idle;
+		//	}
+		//}
 		if (AEXPActor* pEXP = Cast<AEXPActor>(OtherActor))
 		{
 			m_TotalExperience += pEXP->GetExperienceValue();
 
-			FString experiencepoints = FString::FromInt(m_TotalExperience); 
-			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Total Exp: " + experiencepoints)); 
+			FString experiencepoints = FString::FromInt(m_TotalExperience);
+			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Total Exp: " + experiencepoints));
 
-			pEXP->Destroy(); 
+			pEXP->Destroy();
 		}
+
 	}
 }
 
