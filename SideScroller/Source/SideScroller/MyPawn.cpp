@@ -19,6 +19,8 @@
 #include "MainPlayerController.h"
 #include "Kismet/GameplayStatics.h"
 #include "EXPActor.h"
+#include "DoorActor.h"
+#include "KeyActor.h"
 
 
 // Sets default values
@@ -36,6 +38,8 @@ AMyPawn::AMyPawn()
 	m_Box->BodyInstance.bLockXRotation = true;
 	m_Box->BodyInstance.bLockYRotation = true;
 	m_Box->BodyInstance.bLockZRotation = true;
+	//m_Box->BodyInstance.LinearDamping = 2.0f; 
+	//m_Box->BodyInstance.AngularDamping = 10.0f;
 	m_Box->SetEnableGravity(true); 
 	m_Box->OnComponentHit.AddDynamic(this, &AMyPawn::OnHit); 
 	m_Box->ComponentTags.Add(TEXT("PlayerHitBox")); 
@@ -300,6 +304,26 @@ void AMyPawn::SetIsNearBonfire(bool isNear)
 	bIsNearBonfire = isNear; 
 }
 
+bool AMyPawn::GetIsNearBonfire()
+{
+	return bIsNearBonfire;
+}
+
+void AMyPawn::SetIsNearDoor(bool isNear)
+{
+	bIsNearDoor = isNear; 
+}
+
+bool AMyPawn::GetIsNearDoor()
+{
+	return bIsNearDoor;
+}
+
+void AMyPawn::SetDoorInProximity(ADoorActor* pDoor)
+{
+	m_DoorInProximity = pDoor; 
+}
+
 void AMyPawn::ApplyDamage(float damage)
 {
 	if (m_PlayerState != UPlayerState::Dead)
@@ -388,43 +412,57 @@ void AMyPawn::SpendEXP(int value)
 
 void AMyPawn::Move_X_Axis(float value)
 {
-	if (m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Dead)
+	if (m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Dead)
 	{
 		m_CurrentVelocity.X = FMath::Clamp(value, -1.0f, 1.0f) * 200.0f;
 
 		if (m_CurrentVelocity.X > 0)
 		{
-			m_PlayerState = UPlayerState::Running;
+			
 			m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 0.0f, 0.0f));
 
 			m_LastVelocity = m_CurrentVelocity;
+
+			if (m_PlayerState != UPlayerState::Jumping)
+			{
+				m_PlayerState = UPlayerState::Running;
+			}
 		}
 		if (m_CurrentVelocity.X < 0)
 		{
-			m_PlayerState = UPlayerState::Running;
+			
 			m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 180.0f, 0.0f));
 
 			m_LastVelocity = m_CurrentVelocity;
+
+			if (m_PlayerState != UPlayerState::Jumping)
+			{
+				m_PlayerState = UPlayerState::Running;
+			}
 		}
 	}	
 }
 
 void AMyPawn::Move_Y_Axis(float value)
 {
-	if (m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Jumping && m_PlayerState != UPlayerState::Dead)
+	if (m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Dead)
 	{
 		m_CurrentVelocity.Y = FMath::Clamp(value, -1.0f, 1.0f) * 200.0f;
 
 		if (m_CurrentVelocity.Y != 0)
 		{
-			m_PlayerState = UPlayerState::Running; 
 
 			if (m_LastVelocity.X > 0)
 				m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 0.0f, 0.0f));
 
 			if (m_LastVelocity.X < 0)
 				m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 180.0f, 0.0f));
+			if (m_PlayerState != UPlayerState::Jumping)
+			{
+				m_PlayerState = UPlayerState::Running;
+			}
 		}
+
 	}
 }
 
@@ -482,7 +520,7 @@ void AMyPawn::Jump()
 		m_ActiveFlipBook->SetFlipbook(m_Jump);
 		m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
 		//bCanJump = false;
-		m_Box->AddImpulse(FVector(m_LastVelocity.X, 0.0f, 1.0f) * m_JumpValue);
+		m_Box->AddImpulse(FVector(0.0f, 0.0f, 1.0f) * m_JumpValue);
 	}
 }
 
@@ -545,6 +583,20 @@ void AMyPawn::InteractWithBonfire()
 				AMainPlayerController* pPC = Cast<AMainPlayerController>(UGameplayStatics::GetPlayerController(World, 0));
 				pPC->bShowMouseCursor = true;
 			}
+		}
+	}
+}
+
+void AMyPawn::InteractWithDoor()
+{
+	for (int i = 0; i < m_CollectedKeys.Num(); i++)
+	{
+		if ((m_CollectedKeys[i]->ActorHasTag("Small") && m_DoorInProximity->ActorHasTag("Small")) || (m_CollectedKeys[i]->ActorHasTag("Big") && m_DoorInProximity->ActorHasTag("Big")))
+		{
+			m_CollectedKeys.RemoveAt(i);
+			m_DoorInProximity->SetIsLocked(false); 
+
+			break;
 		}
 	}
 }

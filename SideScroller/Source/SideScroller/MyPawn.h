@@ -52,6 +52,7 @@ public:
 	virtual void ShieldRelease(); 
 
 	virtual void InteractWithBonfire(); 
+	virtual void InteractWithDoor(); 
 	virtual void PauseGame(); 
 
 	virtual UPlayerState GetPlayerState(); 
@@ -65,7 +66,12 @@ public:
 	UFUNCTION()
 		virtual void OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
-	virtual void SetIsNearBonfire(bool isNear); 
+	virtual void SetIsNearBonfire(bool isNear);
+	bool GetIsNearBonfire(); 
+	virtual void SetIsNearDoor(bool isNear); 
+	bool GetIsNearDoor(); 
+
+	void SetDoorInProximity(class ADoorActor* pDoor); 
 
 	void ApplyDamage(float damage); 
 	void SetCanBeDamaged(); 
@@ -98,6 +104,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void SpendEXP(int value); 
+
+	UPROPERTY(VisibleAnywhere, Category = "Player")
+		TArray<class AKeyActor*> m_CollectedKeys; 
 
 protected: 
 
@@ -183,6 +192,7 @@ protected:
 	int32 AttackFlipbookLengthInFrames;
 
 	bool bIsNearBonfire = false;
+	bool bIsNearDoor = false;
 	bool bIsInMenu = false;
 	bool bSwordDamageActive = true;
 	bool bStaminaReductionActive = true; 
@@ -194,5 +204,7 @@ protected:
 	//class AEnemyCharacter* m_RecentEnemy = nullptr; 
 	class AEnemyPawn* m_RecentEnemy = nullptr; 
 
-	int32 m_TotalExperience = 0; 
+	int32 m_TotalExperience = 0;
+
+	ADoorActor* m_DoorInProximity = nullptr; 
 };

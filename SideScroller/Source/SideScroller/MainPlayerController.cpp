@@ -124,7 +124,14 @@ void AMainPlayerController::Interact()
 	AMyPawn* pPawn = Cast<AMyPawn>(GetPawn());
 	if (pPawn != nullptr)
 	{
-		pPawn->InteractWithBonfire(); 
+		if (pPawn->GetIsNearBonfire())
+		{
+			pPawn->InteractWithBonfire(); 
+		}
+		if (pPawn->GetIsNearDoor())
+		{
+			pPawn->InteractWithDoor(); 
+		}
 	}
 }
 

@@ -1,11 +1,13 @@
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\BeastPawn.h
-D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\EnemyPawn.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\Bonfire.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\EnemyCharacter.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\EnemyController.h
-D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\MyCharacter.h
+D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\KeyActor.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\MainPlayerController.h
+D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\MyCharacter.h
+D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\EnemyPawn.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\PlayerHUD.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\SideScrollerGameModeBase.h
-D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\MyPawn.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\EXPActor.h
+D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\MyPawn.h
+D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\DoorActor.h
