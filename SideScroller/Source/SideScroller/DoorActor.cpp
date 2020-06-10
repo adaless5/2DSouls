@@ -5,6 +5,8 @@
 #include "Components/BoxComponent.h"
 #include "PaperSpriteComponent.h"
 #include "MyPawn.h"
+#include "SideScroller/SideScrollerGameModeBase.h"
+#include "Components/AudioComponent.h"
 
 // Sets default values
 ADoorActor::ADoorActor()
@@ -33,6 +35,8 @@ ADoorActor::ADoorActor()
 
 	m_ClosedDoorSprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("ClosedDoorSprite"));
 	m_OpenDoorSprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("OpenDoorSprite"));
+
+	m_AudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("AudioComponent")); 
 }
 
 // Called when the game starts or when spawned
@@ -41,6 +45,7 @@ void ADoorActor::BeginPlay()
 	Super::BeginPlay();
 	
 	m_ActiveSprite = m_ClosedDoorSprite; 
+	m_AudioComponent->Stop(); 
 }
 
 // Called every frame
@@ -57,6 +62,18 @@ void ADoorActor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
 		GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Stepped near door.")); 
 		PlayerPawn->SetIsNearDoor(true); 
 		PlayerPawn->SetDoorInProximity(this); 
+
+		UWorld* World = GetWorld(); 
+
+		if (World)
+		{
+			ASideScrollerGameModeBase* GameMode = Cast<ASideScrollerGameModeBase>(World->GetAuthGameMode());
+
+			if (GameMode)
+			{
+				GameMode->DisplayInteract(true);
+			}
+		}
 	}
 }
 
@@ -67,6 +84,18 @@ void ADoorActor::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* Other
 		GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Stepped away from door."));
 		PlayerPawn->SetIsNearDoor(false); 
 		PlayerPawn->SetDoorInProximity(nullptr); 
+
+		UWorld* World = GetWorld();
+
+		if (World)
+		{
+			ASideScrollerGameModeBase* GameMode = Cast<ASideScrollerGameModeBase>(World->GetAuthGameMode());
+
+			if (GameMode)
+			{
+				GameMode->DisplayInteract(false);
+			}
+		}
 	}
 }
 
@@ -82,6 +111,7 @@ void ADoorActor::SetIsLocked(bool IsLocked)
 	{
 		SetActorEnableCollision(false); 
 		SetActorHiddenInGame(true); 
+		m_AudioComponent->Play(); 
 	}
 }
 

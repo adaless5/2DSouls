@@ -131,6 +131,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEnemyPawn); \
 	FORCEINLINE static uint32 __PPO__EXPTemplate() { return STRUCT_OFFSET(AEnemyPawn, EXPTemplate); } \
 	FORCEINLINE static uint32 __PPO__m_ExperienceValue() { return STRUCT_OFFSET(AEnemyPawn, m_ExperienceValue); } \
 	FORCEINLINE static uint32 __PPO__m_NumberOfExperience() { return STRUCT_OFFSET(AEnemyPawn, m_NumberOfExperience); } \
+	FORCEINLINE static uint32 __PPO__m_DamageAudioComponent() { return STRUCT_OFFSET(AEnemyPawn, m_DamageAudioComponent); } \
+	FORCEINLINE static uint32 __PPO__m_EXPAudioComponent() { return STRUCT_OFFSET(AEnemyPawn, m_EXPAudioComponent); } \
 	FORCEINLINE static uint32 __PPO__BloodFX() { return STRUCT_OFFSET(AEnemyPawn, BloodFX); }
 
 

@@ -8,6 +8,7 @@
 #include "SideScroller/MyPawn.h"
 #include "PaperFlipbook.h"
 #include "PaperFlipbookComponent.h"
+#include "SideScroller/SideScrollerGameModeBase.h"
 
 // Sets default values
 ABonfire::ABonfire()
@@ -60,6 +61,18 @@ void ABonfire::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Other
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, TEXT("Player entered bonfire sphere.")); 
 			PlayerPawn->SetIsNearBonfire(true); 
+
+			UWorld* World = GetWorld(); 
+
+			if (World)
+			{
+				ASideScrollerGameModeBase* GameMode = Cast<ASideScrollerGameModeBase>(World->GetAuthGameMode()); 
+				
+				if (GameMode)
+				{
+					GameMode->DisplayInteract(true); 
+				}
+			}
 		}
 	}
 }
@@ -72,6 +85,18 @@ void ABonfire::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AAc
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, TEXT("Player exited bonfire sphere."));
 			PlayerPawn->SetIsNearBonfire(false); 
+
+			UWorld* World = GetWorld();
+
+			if (World)
+			{
+				ASideScrollerGameModeBase* GameMode = Cast<ASideScrollerGameModeBase>(World->GetAuthGameMode());
+
+				if (GameMode)
+				{
+					GameMode->DisplayInteract(false);
+				}
+			}
 		}
 	}
 }

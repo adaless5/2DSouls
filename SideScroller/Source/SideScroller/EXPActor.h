@@ -46,7 +46,4 @@ public:
 	USphereComponent* GetSphereComponent(); 
 	void SetExperienceValue(uint32 value); 
 	uint32 GetExperienceValue();
-
-	UFUNCTION()
-		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 };

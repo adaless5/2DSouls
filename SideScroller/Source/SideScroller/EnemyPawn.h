@@ -132,6 +132,12 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "EXP")
 		int m_NumberOfExperience = 3;
 
+	UPROPERTY(EditAnywhere, Category = "Enemy")
+		class UAudioComponent* m_DamageAudioComponent; 
+
+	UPROPERTY(EditAnywhere, Category = "Enemy")
+		UAudioComponent* m_EXPAudioComponent; 
+
 	int m_ExperienceSpawnedCounter = 0; 
 
 	//int m_NumberOfExperience = 3; 

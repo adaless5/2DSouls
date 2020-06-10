@@ -47,3 +47,9 @@ D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\DoorActor.h
 D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller\DoorActor.generated.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\KeyActor.h
 D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller\KeyActor.generated.h
+D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Sound/SoundCue.h
+D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Sound/SoundNode.h
+D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundNode.generated.h
+D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundCue.generated.h
+D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/AudioComponent.h
+D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AudioComponent.generated.h

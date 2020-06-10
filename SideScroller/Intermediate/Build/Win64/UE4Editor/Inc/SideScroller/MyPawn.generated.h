@@ -321,7 +321,15 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyPawn); \
 	FORCEINLINE static uint32 __PPO__m_InvincibiltyTimerRate() { return STRUCT_OFFSET(AMyPawn, m_InvincibiltyTimerRate); } \
 	FORCEINLINE static uint32 __PPO__m_BonfireMenuWidget() { return STRUCT_OFFSET(AMyPawn, m_BonfireMenuWidget); } \
 	FORCEINLINE static uint32 __PPO__m_PauseMenuWidget() { return STRUCT_OFFSET(AMyPawn, m_PauseMenuWidget); } \
-	FORCEINLINE static uint32 __PPO__m_RefillStaminaTimerRate() { return STRUCT_OFFSET(AMyPawn, m_RefillStaminaTimerRate); }
+	FORCEINLINE static uint32 __PPO__m_RefillStaminaTimerRate() { return STRUCT_OFFSET(AMyPawn, m_RefillStaminaTimerRate); } \
+	FORCEINLINE static uint32 __PPO__m_FootstepTimerRate() { return STRUCT_OFFSET(AMyPawn, m_FootstepTimerRate); } \
+	FORCEINLINE static uint32 __PPO__m_FootstepCue() { return STRUCT_OFFSET(AMyPawn, m_FootstepCue); } \
+	FORCEINLINE static uint32 __PPO__m_FootstepAudioComponent() { return STRUCT_OFFSET(AMyPawn, m_FootstepAudioComponent); } \
+	FORCEINLINE static uint32 __PPO__m_SwordAudioComponent() { return STRUCT_OFFSET(AMyPawn, m_SwordAudioComponent); } \
+	FORCEINLINE static uint32 __PPO__m_DamageAudioComponent() { return STRUCT_OFFSET(AMyPawn, m_DamageAudioComponent); } \
+	FORCEINLINE static uint32 __PPO__m_JumpAudioComponent() { return STRUCT_OFFSET(AMyPawn, m_JumpAudioComponent); } \
+	FORCEINLINE static uint32 __PPO__m_RollAudioComponent() { return STRUCT_OFFSET(AMyPawn, m_RollAudioComponent); } \
+	FORCEINLINE static uint32 __PPO__m_EXPCollectAudioComponent() { return STRUCT_OFFSET(AMyPawn, m_EXPCollectAudioComponent); }
 
 
 #define SideScroller_Source_SideScroller_MyPawn_h_21_PROLOG

@@ -35,7 +35,10 @@ protected:
 		UBoxComponent* m_TriggerBox; 
 
 	UPROPERTY(EditInstanceOnly, Category = "Door")
-		FString m_DoorTag; 
+		FString m_DoorTag;
+
+	UPROPERTY(EditAnywhere, Category = "Door")
+		class UAudioComponent* m_AudioComponent; 
 
 	bool bIsLocked = true; 
 

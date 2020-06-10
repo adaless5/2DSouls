@@ -22,6 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeKeyActor() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UAudioComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperSpriteComponent_NoRegister();
 // End Cross Module References
@@ -117,6 +118,10 @@ void EmptyLinkFunctionForGeneratedCodeKeyActor() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_AudioComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_m_AudioComponent;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_KeyTag_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_m_KeyTag;
@@ -146,6 +151,14 @@ void EmptyLinkFunctionForGeneratedCodeKeyActor() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AKeyActor_Statics::NewProp_m_AudioComponent_MetaData[] = {
+		{ "Category", "Key" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "KeyActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AKeyActor_Statics::NewProp_m_AudioComponent = { "m_AudioComponent", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AKeyActor, m_AudioComponent), Z_Construct_UClass_UAudioComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AKeyActor_Statics::NewProp_m_AudioComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AKeyActor_Statics::NewProp_m_AudioComponent_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AKeyActor_Statics::NewProp_m_KeyTag_MetaData[] = {
 		{ "Category", "Key" },
 		{ "ModuleRelativePath", "KeyActor.h" },
@@ -169,6 +182,7 @@ void EmptyLinkFunctionForGeneratedCodeKeyActor() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AKeyActor_Statics::NewProp_m_SpriteComponent = { "m_SpriteComponent", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AKeyActor, m_SpriteComponent), Z_Construct_UClass_UPaperSpriteComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AKeyActor_Statics::NewProp_m_SpriteComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AKeyActor_Statics::NewProp_m_SpriteComponent_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AKeyActor_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyActor_Statics::NewProp_m_AudioComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyActor_Statics::NewProp_m_KeyTag,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyActor_Statics::NewProp_m_CollisionBox,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AKeyActor_Statics::NewProp_m_SpriteComponent,
@@ -200,7 +214,7 @@ void EmptyLinkFunctionForGeneratedCodeKeyActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AKeyActor, 767252136);
+	IMPLEMENT_CLASS(AKeyActor, 3931945546);
 	template<> SIDESCROLLER_API UClass* StaticClass<AKeyActor>()
 	{
 		return AKeyActor::StaticClass();

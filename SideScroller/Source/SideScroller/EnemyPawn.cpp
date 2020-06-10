@@ -15,6 +15,7 @@
 #include "EXPActor.h"
 #include "Components/SphereComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "Components/AudioComponent.h"
 
 // Sets default values
 AEnemyPawn::AEnemyPawn()
@@ -48,6 +49,9 @@ AEnemyPawn::AEnemyPawn()
 	m_AttackingFlipbook = CreateDefaultSubobject<UPaperFlipbook>(TEXT("AttackingAnimation"));
 
 	BloodFX = CreateDefaultSubobject<UParticleSystem>(TEXT("BloodFX")); 
+
+	m_DamageAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("DamageAudio")); 
+	m_EXPAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("EXPAudio")); 
 }
 
 // Called when the game starts or when spawned
@@ -64,6 +68,9 @@ void AEnemyPawn::BeginPlay()
 	{
 		World->GetTimerManager().SetTimer(m_StartPatrolTimerHandle, this, &AEnemyPawn::StartPatrol, m_StartPatrolTimerRate, false, m_StartPatrolTimerRate); 
 	}
+
+	m_DamageAudioComponent->Stop();
+	m_EXPAudioComponent->Stop(); 
 }
 
 // Called every frame
@@ -220,6 +227,7 @@ void AEnemyPawn::ApplyDamage(int32 damage)
 {
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), BloodFX, GetActorLocation(), FRotator::ZeroRotator, true); 
 	m_TotalHealth -= damage;
+	m_DamageAudioComponent->Play(); 
 }
 
 void AEnemyPawn::SetEnemyState(UEnemyState newState)
@@ -340,7 +348,8 @@ void AEnemyPawn::SpawnExperience()
 					float RandomX = FMath::RandRange(-500.0f, 500.0f);
 					float RandomY = FMath::RandRange(-500.0f, 500.0f); 
 					USphereComponent* pCollisionComponent = SpawnedEXP->GetSphereComponent(); 
-					pCollisionComponent->AddImpulse(FVector(RandomX, RandomY, 500.0f)); 
+					pCollisionComponent->AddImpulse(FVector(RandomX, RandomY, 500.0f));
+					m_EXPAudioComponent->Play(); 
 				}
 			}
 		}

@@ -21,7 +21,8 @@
 #include "EXPActor.h"
 #include "DoorActor.h"
 #include "KeyActor.h"
-
+#include "Sound/SoundCue.h"
+#include "Components/AudioComponent.h"
 
 // Sets default values
 AMyPawn::AMyPawn()
@@ -73,6 +74,14 @@ AMyPawn::AMyPawn()
 	m_Camera->SetOrthoWidth(2500.0f); 
 	m_Camera->SetProjectionMode(ECameraProjectionMode::Orthographic); 
 	m_Camera->SetupAttachment(m_SpringArm);
+
+	m_FootstepCue = CreateDefaultSubobject<USoundCue>(TEXT("FootstepCue")); 
+	m_FootstepAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("Footsteps"));
+	m_SwordAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("SwordSwing")); 
+	m_DamageAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("DamageAudio")); 
+	m_JumpAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("JumpAudio")); 
+	m_RollAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("RollAudio")); 
+	m_EXPCollectAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("EXPAudio"));
 }
 
 // Called when the game starts or when spawned
@@ -83,6 +92,12 @@ void AMyPawn::BeginPlay()
 	m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f); 
 	m_LastVelocity = FVector(1.0f, 0.0f, 0.0f); 
 
+	m_FootstepAudioComponent->Stop(); 
+	m_SwordAudioComponent->Stop(); 
+	m_JumpAudioComponent->Stop(); 
+	m_DamageAudioComponent->Stop(); 
+	m_RollAudioComponent->Stop(); 
+	m_EXPCollectAudioComponent->Stop(); 
 }
 
 // Called every frame
@@ -129,6 +144,7 @@ void AMyPawn::Tick(float DeltaTime)
 						World->GetTimerManager().SetTimer(m_RefillStaminaTimerHandle, this, &AMyPawn::RefillStamina, m_RefillStaminaTimerRate, false, m_RefillStaminaTimerRate);
 					}
 					m_CurrentStamina -= 1.0f;
+					m_SwordAudioComponent->Play(); 
 					m_Box->AddImpulse(FVector(m_LastVelocity.X * m_AttackStepValue, 0.0f, 0.0f));
 					bStaminaReductionActive = false;
 				}
@@ -258,7 +274,7 @@ void AMyPawn::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitive
 		if (AEXPActor* pEXP = Cast<AEXPActor>(OtherActor))
 		{
 			m_TotalExperience += pEXP->GetExperienceValue();
-
+			m_EXPCollectAudioComponent->Play();
 			FString experiencepoints = FString::FromInt(m_TotalExperience);
 			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Yellow, TEXT("Total Exp: " + experiencepoints));
 
@@ -337,6 +353,7 @@ void AMyPawn::ApplyDamage(float damage)
 				World->GetTimerManager().SetTimer(m_InvincibilityTimerHandle, this, &AMyPawn::SetCanBeDamaged, m_InvincibiltyTimerRate, false, m_InvincibiltyTimerRate);
 			}
 			m_CurentHealth -= damage;
+			m_DamageAudioComponent->Play(); 
 			if (m_CurentHealth < 1)
 			{
 				//m_TotalHealth = 0;
@@ -410,8 +427,22 @@ void AMyPawn::SpendEXP(int value)
 	m_TotalExperience -= value; 
 }
 
+void AMyPawn::PlayFootstepSound()
+{
+	m_FootstepAudioComponent->Play(); 
+}
+
 void AMyPawn::Move_X_Axis(float value)
 {
+	if (m_PlayerState != UPlayerState::Running)
+	{
+		UWorld* World = GetWorld();
+		if (World)
+		{
+			World->GetTimerManager().SetTimer(m_FootStepTimerHandle, this, &AMyPawn::PlayFootstepSound, m_FootstepTimerRate, true);
+		}
+	}
+
 	if (m_PlayerState != UPlayerState::Shielding && m_PlayerState != UPlayerState::Attacking && m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Dead)
 	{
 		m_CurrentVelocity.X = FMath::Clamp(value, -1.0f, 1.0f) * 200.0f;
@@ -425,6 +456,11 @@ void AMyPawn::Move_X_Axis(float value)
 
 			if (m_PlayerState != UPlayerState::Jumping)
 			{
+				/*UWorld* World = GetWorld(); 
+				if (World)
+				{
+					World->GetTimerManager().SetTimer(m_FootStepTimerHandle, this, &AMyPawn::PlayFootstepSound, m_FootstepTimerRate, true); 
+				}*/
 				m_PlayerState = UPlayerState::Running;
 			}
 		}
@@ -433,10 +469,16 @@ void AMyPawn::Move_X_Axis(float value)
 			
 			m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 180.0f, 0.0f));
 
-			m_LastVelocity = m_CurrentVelocity;
+			m_LastVelocity = m_CurrentVelocity; 
 
 			if (m_PlayerState != UPlayerState::Jumping)
 			{
+				/*UWorld* World = GetWorld();
+				if (World)
+				{
+					World->GetTimerManager().SetTimer(m_FootStepTimerHandle, this, &AMyPawn::PlayFootstepSound, m_FootstepTimerRate, true);
+				}*/
+
 				m_PlayerState = UPlayerState::Running;
 			}
 		}
@@ -457,12 +499,18 @@ void AMyPawn::Move_Y_Axis(float value)
 
 			if (m_LastVelocity.X < 0)
 				m_ActiveFlipBook->SetRelativeRotation(FRotator(0.0, 180.0f, 0.0f));
+
 			if (m_PlayerState != UPlayerState::Jumping)
 			{
+				/*UWorld* World = GetWorld();
+				if (World)
+				{
+					World->GetTimerManager().SetTimer(m_FootStepTimerHandle, this, &AMyPawn::PlayFootstepSound, m_FootstepTimerRate, true);
+				}*/
+
 				m_PlayerState = UPlayerState::Running;
 			}
 		}
-
 	}
 }
 
@@ -521,6 +569,7 @@ void AMyPawn::Jump()
 		m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
 		//bCanJump = false;
 		m_Box->AddImpulse(FVector(0.0f, 0.0f, 1.0f) * m_JumpValue);
+		m_JumpAudioComponent->Play(); 
 	}
 }
 
@@ -531,6 +580,7 @@ void AMyPawn::Roll()
 		if (m_PlayerState != UPlayerState::Rolling && m_PlayerState != UPlayerState::Dead)
 		{
 			bIsRefillingStamina = false;
+			m_RollAudioComponent->Play(); 
 			m_CurrentStamina -= 2.0f;
 			m_CurrentVelocity = FVector(0.0f, 0.0f, 0.0f);
 			m_PlayerState = UPlayerState::Rolling;

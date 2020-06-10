@@ -22,7 +22,10 @@ public:
 		class UBoxComponent* m_CollisionBox;
 
 	UPROPERTY(EditInstanceOnly, Category = "Key")
-		FString m_KeyTag; 
+		FString m_KeyTag;
+
+	UPROPERTY(EditAnywhere, Category = "Key")
+		class UAudioComponent* m_AudioComponent; 
 
 protected:
 	// Called when the game starts or when spawned

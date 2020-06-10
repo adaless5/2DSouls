@@ -17,6 +17,23 @@ class UUserWidget;
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_SPARSE_DATA
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetDisplayInteract) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetDisplayInteract(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execDisplayInteract) \
+	{ \
+		P_GET_UBOOL(Z_Param_bShouldDisplay); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->DisplayInteract(Z_Param_bShouldDisplay); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execGetMagicIncreaseCost) \
 	{ \
 		P_FINISH; \
@@ -52,6 +69,23 @@ class UUserWidget;
 
 
 #define SideScroller_Source_SideScroller_SideScrollerGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetDisplayInteract) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetDisplayInteract(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execDisplayInteract) \
+	{ \
+		P_GET_UBOOL(Z_Param_bShouldDisplay); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->DisplayInteract(Z_Param_bShouldDisplay); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetMagicIncreaseCost) \
 	{ \

@@ -20,6 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeSideScrollerGameModeBase() {}
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_ASideScrollerGameModeBase_ChangeMenuWidget();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
+	SIDESCROLLER_API UFunction* Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract();
+	SIDESCROLLER_API UFunction* Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_ASideScrollerGameModeBase_GetHealthIncreaseCost();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_ASideScrollerGameModeBase_GetMagicIncreaseCost();
 	SIDESCROLLER_API UFunction* Z_Construct_UFunction_ASideScrollerGameModeBase_GetStaminaIncreaseCost();
@@ -29,6 +31,8 @@ void EmptyLinkFunctionForGeneratedCodeSideScrollerGameModeBase() {}
 		UClass* Class = ASideScrollerGameModeBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ChangeMenuWidget", &ASideScrollerGameModeBase::execChangeMenuWidget },
+			{ "DisplayInteract", &ASideScrollerGameModeBase::execDisplayInteract },
+			{ "GetDisplayInteract", &ASideScrollerGameModeBase::execGetDisplayInteract },
 			{ "GetHealthIncreaseCost", &ASideScrollerGameModeBase::execGetHealthIncreaseCost },
 			{ "GetMagicIncreaseCost", &ASideScrollerGameModeBase::execGetMagicIncreaseCost },
 			{ "GetStaminaIncreaseCost", &ASideScrollerGameModeBase::execGetStaminaIncreaseCost },
@@ -65,6 +69,80 @@ void EmptyLinkFunctionForGeneratedCodeSideScrollerGameModeBase() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASideScrollerGameModeBase_ChangeMenuWidget_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics
+	{
+		struct SideScrollerGameModeBase_eventDisplayInteract_Parms
+		{
+			bool bShouldDisplay;
+		};
+		static void NewProp_bShouldDisplay_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bShouldDisplay;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::NewProp_bShouldDisplay_SetBit(void* Obj)
+	{
+		((SideScrollerGameModeBase_eventDisplayInteract_Parms*)Obj)->bShouldDisplay = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::NewProp_bShouldDisplay = { "bShouldDisplay", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(SideScrollerGameModeBase_eventDisplayInteract_Parms), &Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::NewProp_bShouldDisplay_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::NewProp_bShouldDisplay,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SideScrollerGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASideScrollerGameModeBase, nullptr, "DisplayInteract", nullptr, nullptr, sizeof(SideScrollerGameModeBase_eventDisplayInteract_Parms), Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics
+	{
+		struct SideScrollerGameModeBase_eventGetDisplayInteract_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((SideScrollerGameModeBase_eventGetDisplayInteract_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(SideScrollerGameModeBase_eventGetDisplayInteract_Parms), &Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SideScrollerGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASideScrollerGameModeBase, nullptr, "GetDisplayInteract", nullptr, nullptr, sizeof(SideScrollerGameModeBase_eventGetDisplayInteract_Parms), Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -189,6 +267,8 @@ void EmptyLinkFunctionForGeneratedCodeSideScrollerGameModeBase() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASideScrollerGameModeBase_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ASideScrollerGameModeBase_ChangeMenuWidget, "ChangeMenuWidget" }, // 2167116282
+		{ &Z_Construct_UFunction_ASideScrollerGameModeBase_DisplayInteract, "DisplayInteract" }, // 3119624692
+		{ &Z_Construct_UFunction_ASideScrollerGameModeBase_GetDisplayInteract, "GetDisplayInteract" }, // 4134437594
 		{ &Z_Construct_UFunction_ASideScrollerGameModeBase_GetHealthIncreaseCost, "GetHealthIncreaseCost" }, // 1170593134
 		{ &Z_Construct_UFunction_ASideScrollerGameModeBase_GetMagicIncreaseCost, "GetMagicIncreaseCost" }, // 1127873482
 		{ &Z_Construct_UFunction_ASideScrollerGameModeBase_GetStaminaIncreaseCost, "GetStaminaIncreaseCost" }, // 2729962109
@@ -239,7 +319,7 @@ void EmptyLinkFunctionForGeneratedCodeSideScrollerGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASideScrollerGameModeBase, 1150221285);
+	IMPLEMENT_CLASS(ASideScrollerGameModeBase, 3193505048);
 	template<> SIDESCROLLER_API UClass* StaticClass<ASideScrollerGameModeBase>()
 	{
 		return ASideScrollerGameModeBase::StaticClass();

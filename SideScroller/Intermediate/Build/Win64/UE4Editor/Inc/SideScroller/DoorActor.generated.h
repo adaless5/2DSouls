@@ -123,7 +123,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ADoorActor); \
 	FORCEINLINE static uint32 __PPO__m_OpenDoorSprite() { return STRUCT_OFFSET(ADoorActor, m_OpenDoorSprite); } \
 	FORCEINLINE static uint32 __PPO__m_CollisionBox() { return STRUCT_OFFSET(ADoorActor, m_CollisionBox); } \
 	FORCEINLINE static uint32 __PPO__m_TriggerBox() { return STRUCT_OFFSET(ADoorActor, m_TriggerBox); } \
-	FORCEINLINE static uint32 __PPO__m_DoorTag() { return STRUCT_OFFSET(ADoorActor, m_DoorTag); }
+	FORCEINLINE static uint32 __PPO__m_DoorTag() { return STRUCT_OFFSET(ADoorActor, m_DoorTag); } \
+	FORCEINLINE static uint32 __PPO__m_AudioComponent() { return STRUCT_OFFSET(ADoorActor, m_AudioComponent); }
 
 
 #define SideScroller_Source_SideScroller_DoorActor_h_9_PROLOG

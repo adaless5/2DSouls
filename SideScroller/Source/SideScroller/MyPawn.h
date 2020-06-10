@@ -105,6 +105,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void SpendEXP(int value); 
 
+	void PlayFootstepSound(); 
+
 	UPROPERTY(VisibleAnywhere, Category = "Player")
 		TArray<class AKeyActor*> m_CollectedKeys; 
 
@@ -182,6 +184,32 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category = "Player")
 		float m_RefillStaminaTimerRate = 2.0f; 
+
+	FTimerHandle m_FootStepTimerHandle;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		float m_FootstepTimerRate = 0.5f; 
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		class USoundCue* m_FootstepCue;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		class UAudioComponent* m_FootstepAudioComponent; 
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		UAudioComponent* m_SwordAudioComponent;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		UAudioComponent* m_DamageAudioComponent;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		UAudioComponent* m_JumpAudioComponent;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		UAudioComponent* m_RollAudioComponent;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		UAudioComponent* m_EXPCollectAudioComponent;
 
 	FVector m_CurrentVelocity; 
 	FVector m_LastVelocity; 

@@ -53,3 +53,13 @@ int ASideScrollerGameModeBase::GetMagicIncreaseCost()
 {
 	return m_MagicIncreaseCost; 
 }
+
+void ASideScrollerGameModeBase::DisplayInteract(bool bShouldDisplay)
+{
+	bDisplayInteract = bShouldDisplay; 
+}
+
+bool ASideScrollerGameModeBase::GetDisplayInteract()
+{
+	return bDisplayInteract;
+}

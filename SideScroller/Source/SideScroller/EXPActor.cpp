@@ -22,7 +22,6 @@ AEXPActor::AEXPActor()
 	m_CollisionComponent->SetEnableGravity(true); 
 	m_CollisionComponent->SetLinearDamping(10.0f); 
 	m_CollisionComponent->ComponentTags.Add(TEXT("Experience"));
-	m_CollisionComponent->OnComponentHit.AddDynamic(this, &AEXPActor::OnHit); 
 	RootComponent = m_CollisionComponent; 
 
 	m_MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent")); 
@@ -55,17 +54,6 @@ void AEXPActor::Tick(float DeltaTime)
 	{
 		FVector lerpPosition = FMath::Lerp(CurrentLoc, TargetLoc, 0.075f);
 		SetActorLocation(lerpPosition);
-	}
-}
-
-void AEXPActor::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
-{
-	if (OtherComp->ComponentHasTag("Ground"))
-	{
-		//UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), m_EXPParticles, GetActorLocation(), FRotator::ZeroRotator, true);
-	}
-	if (AMyPawn* pPlayer = Cast<AMyPawn>(OtherActor))
-	{
 	}
 }
 

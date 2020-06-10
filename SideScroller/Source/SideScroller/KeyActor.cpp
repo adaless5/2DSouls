@@ -5,6 +5,7 @@
 #include "Components/BoxComponent.h"
 #include "PaperSpriteComponent.h"
 #include "MyPawn.h"
+#include "Components/AudioComponent.h"
 
 // Sets default values
 AKeyActor::AKeyActor()
@@ -23,13 +24,16 @@ AKeyActor::AKeyActor()
 	m_SpriteComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision); 
 	m_SpriteComponent->SetCollisionProfileName(TEXT("NoCollision"));
 	m_SpriteComponent->SetupAttachment(RootComponent); 
+
+	m_AudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("AudioComponent")); 
+	
 }
 
 // Called when the game starts or when spawned
 void AKeyActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	m_AudioComponent->Stop(); 
 }
 
 // Called every frame
@@ -45,6 +49,7 @@ void AKeyActor::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimiti
 		PlayerPawn->m_CollectedKeys.Add(this); 
 		SetActorHiddenInGame(true); 
 		SetActorEnableCollision(false); 
+		m_AudioComponent->Play(); 
 		//Destroy(); 
 	}
 }

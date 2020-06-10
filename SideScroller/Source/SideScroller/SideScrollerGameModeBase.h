@@ -27,6 +27,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 		int GetMagicIncreaseCost(); 
 
+	UFUNCTION(BlueprintCallable)
+		void DisplayInteract(bool bShouldDisplay); 
+
+	UFUNCTION(BlueprintCallable)
+		bool GetDisplayInteract(); 
+
 protected:
 	virtual void BeginPlay() override; 
 
@@ -36,4 +42,6 @@ protected:
 	int m_HealthIncreaseCost;
 	int m_StaminaIncreaseCost; 
 	int m_MagicIncreaseCost; 
+
+	bool bDisplayInteract; 
 };

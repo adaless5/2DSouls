@@ -9,3 +9,11 @@ D:\Program Files (x86)\UE_4.24\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\
 D:\Program Files (x86)\UE_4.24\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperSpriteComponent.generated.h
 D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller\MyPawn.h
 D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller\MyPawn.generated.h
+D:\adale\Desktop\2DSouls\SideScroller\Source\SideScroller/SideScrollerGameModeBase.h
+D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+D:\adale\Desktop\2DSouls\SideScroller\Intermediate\Build\Win64\UE4Editor\Inc\SideScroller\SideScrollerGameModeBase.generated.h
+D:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/AudioComponent.h
+D:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AudioComponent.generated.h
